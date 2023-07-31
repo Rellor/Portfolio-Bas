@@ -1,1 +1,6 @@
-
+@import "src/app/variables.scss";
+.textdiv {
+  p {
+    color: $c-black;
+  }
+}
