@@ -32,6 +32,7 @@ export default function Window({
 
   const toggleWindow = () => {
     if (event.cancelable) event.preventDefault();
+    console.log("toggleWindow");
     setShowWindow(!showWindow);
     sendDataToParent(showWindow);
   };
