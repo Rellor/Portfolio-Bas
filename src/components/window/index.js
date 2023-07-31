@@ -59,7 +59,7 @@ export default function Window({
       <div className="window" style={windowstyle} onClick={updateZindex}>
         <div className="titlebar">
           <p>{title}</p>
-          <a onClick={toggleWindow}>X</a>
+          <a onMouseUp={toggleWindow}>X</a>
         </div>
         <div className="contentbox">{children}</div>
       </div>
