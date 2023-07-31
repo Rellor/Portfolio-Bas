@@ -9,6 +9,10 @@
   height: 100vh;
   overflow: hidden;
   font-family: "Space Mono", monospace;
+
+  a {
+    color: $c-black;
+  }
 }
 .blue {
   color: $c-blue;
