@@ -4,7 +4,6 @@ import { useState } from "react";
 import styles from "./page.module.scss";
 
 import Navigation from "@/components/nav";
-import TextBlock from "@/components/textblock";
 import TitleBlock from "@/components/title";
 import Window from "@/components/window";
 import Shortcut from "@/components/shortcut";
@@ -113,12 +112,12 @@ export default function Home() {
             top={"7vh"}
             topMobile={"10vh"}
           >
-            <p>Feel free to contact me!</p>
-            <a href="mailto:basderoller@gmail.com">
+            <p className={styles.black}>Feel free to contact me!</p>
+            <a className={styles.black} href="mailto:basderoller@gmail.com">
               Email: <span className={styles.blue}>Basderoller@gmail.com</span>
             </a>
             <br />
-            <a href="tel:+31647520856">
+            <a className={styles.black} href="tel:+31647520856">
               Nummer: <span className={styles.blue}>+31 647520856</span>
             </a>
           </Window>
@@ -219,7 +218,7 @@ export default function Home() {
             topMobile={"5vh"}
           >
             <TitleBlock title={"Welcome"} />
-            <p>
+            <p className={styles.black}>
               I am Bas, a passionate programmer and designer driven by
               creativity. My work reflects my love for innovative solutions, and
               I take pride in crafting projects that showcase my unique
@@ -230,7 +229,7 @@ export default function Home() {
               also am a huge fan of music and movies.
             </p>
             <br />
-            <p>
+            <p className={styles.black}>
               I am excited to show you what I&apos;ve been up to in my
               portfolio!
             </p>

@@ -9,13 +9,13 @@
   height: 100vh;
   overflow: hidden;
   font-family: "Space Mono", monospace;
-
-  p {
-    color: $c-black;
-  }
 }
 .blue {
   color: $c-blue;
+}
+
+.black {
+  color: $c-black;
 }
 
 .iframe {
