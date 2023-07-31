@@ -57,12 +57,15 @@ export default function Window({
   };
 
   return (
-    <Draggable handle=".titlebar" bounds={"parent"} onStart={updateZindex}>
+    <Draggable handle=".draggable" bounds={"parent"} onStart={updateZindex}>
       <div className="window" style={windowstyle} onClick={updateZindex}>
         <div className="titlebar">
-          <p>{title}</p>
+          <div className="draggable">
+            <p>{title}</p>
+          </div>
+          <a onMouseUp={toggleWindow}>X</a>
         </div>
-        <a onMouseUp={toggleWindow}>X</a>
+
         <div className="contentbox">{children}</div>
       </div>
     </Draggable>
