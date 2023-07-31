@@ -86,7 +86,7 @@ export default function Home() {
           margin={"1rem"}
           marginRight={"3rem"}
           marginLeft={"auto"}
-          src={"/ContactIcon.png"}
+          src={"/contactIcon.png"}
           alt={"ContactIcon"}
           sendDataToParent={sendDataToParentContact}
         />
