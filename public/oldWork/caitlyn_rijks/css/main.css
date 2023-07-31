@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   margin: 0px;
+   font-size: 1em;
+}
+
+.aboutmetab {
+  white-space: nowrap;
+}
+
+
+footer {
+  background-color: #DED5C4;
+  font-size: 0.8em;
+  margin: 0px;
+  padding: 1.2%;
+  text-align: center;
+  box-shadow: 0px -0px 15px 2px rgba(0,0,0,0.47);
+  position: sticky;
+}
+
+footer span {
+  font-size: 0.8em;
+}
+
+/* Navbar */
+nav img {
+  width: 30%;
+}
+
+header {
+  display: flex;
+}
+
+.banner {
+  box-shadow: -5px 8px 15px 2px rgba(0,0,0,0.47);
+  width: 100%;
+  height: auto;
+}
+
+.bannertext {
+  position: absolute;
+  width: 50%;
+  left: 40%;
+  align-self: center;
+}
+
+.topnav {
+  background-color: #DED5C4;
+  display: flex;
+  padding: 0.5%;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.menuitems {
+  min-width: 35%;
+}
+
+.menuitems a {
+  color: black;
+  text-decoration: none;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 1.3em;
+}
+
+/* Projects */
+
+.projectnav {
+  margin-top: 1.5%;
+  margin-bottom: 7%;
+  display: flex;
+  padding: 0.5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectnav a {
+  color: black;
+  text-decoration: none;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 1.4em;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; width:49%; margin-left: 0.5%;} to { opacity:1; width:50%;} }
+@-moz-keyframes fadeIn { from { opacity:0; width:49%; margin-left: 0.5%;} to { opacity:1; width:50%;} }
+@keyframes fadeIn { from { opacity:0; width:49%; margin-left: 0.5%;} to { opacity:1; width:50%;} }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.3s;
+  -moz-animation-duration:0.3s;
+  animation-duration:0.3s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}

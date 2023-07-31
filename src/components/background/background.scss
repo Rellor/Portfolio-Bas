@@ -1,0 +1,12 @@
+@import "src/app/variables.scss";
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("/backgroundPattern.png");
+  background-size: 15rem;
+  background-repeat: repeat;
+  background-color: $c-white;
+}

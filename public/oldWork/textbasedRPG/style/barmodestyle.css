@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39|Press+Start+2P|Zilla+Slab+Highlight&display=swap');
+/* font-family: 'Press Start 2P', cursive;
+font-family: 'Libre Barcode 39', cursive;
+font-family: 'Zilla Slab Highlight', cursive; */
+
+
+body {
+  display: block;
+}
+
+.game {
+  font-family: 'Libre Barcode 39', cursive;
+  margin-top: 29vh;
+}
+
+.center {
+    margin: auto;
+    width: 800px;
+    height: 440px;
+    font-size: 5em;
+}
+
+.options {
+  font-family: 'Press Start 2P', cursive;
+}
+
+#textbox {
+  border: 3px dotted black;
+  font-size: 4.6em;
+  padding: 10px;
+}
+
+#locatie {
+  height: 55px;
+}

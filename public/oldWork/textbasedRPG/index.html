@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" id="style" href="style/hackerstyle.css">
+    <title></title>
+  </head>
+  <body>
+
+<p class="youdied hidden" id="youdied" onclick="location.reload()">YOU DIED</p>
+<img src="picture/Map.png" id="map" class="hidden" alt="Game map">
+
+<div class="options">
+<button type="button" name="button" id="bitmode">8-bit mode</button>
+<button type="button" name="button" id="hackermode">Hacker mode</button>
+<button type="button" name="button" id="barmode">Barmode</button>
+</div>
+
+<div class="costumizer hidden" id="editplayer">
+<p id="closeedit">close</p>
+<div><p class="minus" id="lasthead"> - </p><p id="nexthead"> + </p></div>
+<div><p class="minus" id="lasttorso"> - </p><p id="nexttorso"> + </p></div>
+<div><p class="minus" id="lastfeet"> - </p><p id="nextfeet"> + </p></div>
+</div>
+
+<center>
+<div class="playermenu">
+<p id="openedit" class="hidden"> edit player </p>
+<p id="openshop" class="hidden"> shop </p>
+<p id="filler">[]</p>
+<div> <p class="player" id="playerhead"> o </p> <p class="player" id="playertorso"> -O- </p> <p class="player weapon" id="playerweapon" >  </p> <p class="player" id="playerfeet">||</p></div>
+<center><div class="flex money" id="moneydiv"><p id="money"> 0 </p> <p class="dollar" id="dollar"> $ <p/></div></center>
+</div>
+</center>
+
+<div class="game">
+<p class="center" id="locatie">X 0 / Y 0</p>
+<p class="center" id="textbox">Hi! Use <span>W.A.S.D.</span> to walk, And use <span>M</span> to view the map. You can close it by clicking on it.</p>
+<p class="hidden attackbutton" id="attackbtn"> Attack </p>
+</div>
+
+<div class="shop hidden" id="shop">
+
+<p class="close" id="close">close</p>
+
+<p id="buysword"> Sword  10$</p>
+<p id="buymace"> Mace  50$</p>
+<p id="buyscythe"> Scythe  200$</p>
+<p id="buyultramace"> ULTRA MACE  500$</p>
+<p id="nomoney" class="hidden">You dont have the money for this.</p>
+
+</div>
+
+  </body>
+  <footer>
+<script type="text/javascript" src="script.js">
+</script>
+  </footer>
+</html>

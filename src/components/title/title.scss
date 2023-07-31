@@ -1,0 +1,10 @@
+@import "src/app/variables.scss";
+
+.title {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: $c-blue;
+  }
+}

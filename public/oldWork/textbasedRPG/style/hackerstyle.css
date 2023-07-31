@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39|Press+Start+2P|Zilla+Slab+Highlight&display=swap');
+/* font-family: 'Press Start 2P', cursive;
+font-family: 'Libre Barcode 39', cursive;
+font-family: 'Zilla Slab Highlight', cursive; */
+
+
+body {
+  display: block;
+  background-color: black;
+}
+
+.game {
+  font-family: 'Press Start 2P', cursive;
+  color: green;
+  margin-top: 20vh;
+}
+
+.center {
+    margin: auto;
+    width: 450px;
+    height: 240px;
+    font-size: 2.2em;
+    cursor: default;
+}
+
+.options {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.options button {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  border: 2px solid green;
+  background-color: black;
+  padding: 5px;
+}
+
+#textbox {
+  border: 4px solid green;
+  padding: 10px;
+  font-size: 1.6em;
+  background-color: black;
+  color: white;
+}
+
+#locatie {
+  height: 55px;
+}
+
+.playermenu {
+  color: green;
+  margin-top: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.shop p {
+  border: 3px solid green;
+  width: 32%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.shop .close {
+  margin-bottom: 10%;
+  margin-left: 76.6%;
+  cursor: pointer;
+}
+
+.weapon {
+  position: fixed;
+  left: 51.1vw;
+  font-size: 2em !important;
+  top: 154px;
+}
+
+.shop {
+  color: white;
+  border: 4px solid green;
+  font-family: 'Press Start 2P', cursive;
+  background-color: black;
+}
+
+#openshop {
+  color: white;
+  border: 2px solid green;
+  width: 90px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#openedit {
+  color: white;
+  border: 2px solid green;
+  width: 200px;
+  padding: 5px;
+  cursor: pointer;
+}

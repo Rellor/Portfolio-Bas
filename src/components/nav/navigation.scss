@@ -1,0 +1,38 @@
+@import "src/app/variables.scss";
+
+.navigation {
+  width: 100%;
+}
+
+.navlist {
+  background-color: $c-black;
+  color: $c-white;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.75rem;
+  padding-left: 2rem;
+
+  @media screen and (max-width: 768px) {
+    padding-left: 1rem;
+  }
+}
+
+.name {
+  align-self: center;
+  font-size: 1.1rem;
+}
+
+.menu {
+  background-color: $c-grey;
+  color: $c-black;
+
+  padding: 0.25rem;
+  margin: 0.7rem;
+  width: 4.5rem;
+  text-align: center;
+
+  box-sizing: border-box;
+  border-top: 2px solid $c-buttonaccent;
+  border-left: 2px solid $c-buttonaccent;
+}

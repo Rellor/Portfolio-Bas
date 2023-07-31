@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+
+	<!-- alle links die gebruikt worden. -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- link naar de stylesheet basic.css -->
+<link rel="stylesheet" type="text/css" href="basic.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+
+
+
+
+	<!-- de titel en foto bovenaan (boven de sitebar) -->
+<title> Work </title>
+<link rel="icon" href="Fotos\Favicon.png" type="image/x-icon" />
+
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="">ASSETS AND USER INTERFACE</a>
+    <a href="Animations.html">ANIMATIONS</a>
+    <a href="Illustrations.html">ILLUSTRATIONS</a>
+    <a href="AboutMe.html">ABOUT ME</a>
+    <a href="Process.html">PROCESS</a>
+  </div>
+
+<!-- de navigatiebar die bovenaan de site staat HREF is de link waar je heen gaat als je op die knop klikt. -->
+
+<div id="Top_Navbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+      <span class="TopBtn" style="font-size:30px;cursor:pointer" onclick="openNav()"> <img id="TopBtnImg"  src="Fotos\menu_button.png"/> </span>
+        <center>
+      <div>
+      <img id="Topnaam" src="Fotos\name.png"/>
+      </div>
+        </center>
+  </div>
+</nav>
+</div>
+
+<div id="slide">
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="Fotos\banner_assetsen ui.jpg" style="width:100%">
+    <div class="text">
+      <a href="#goto_work">
+      <img id="scroll_buttonAboutMe" src="Fotos\morework_buttonNEW.png" align="right"/>
+      </a>
+    </div>
+  </div>
+
+	<!--
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="werk/slide1.jpg" style="width:100%">
+    <div class="text">
+      <a href="#goto_work">
+      <img id="scroll_button" src="https://kinderwensbloggers.com/wp-content/uploads/2016/02/test.jpg" />
+      </a>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="werk/slide4.jpg" style="width:100%">
+    <div class="text">
+      <a href="#goto_work">
+      <img id="scroll_button" src="https://kinderwensbloggers.com/wp-content/uploads/2016/02/test.jpg" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--
+<center>
+  <banner id="arrow_down">
+<a href="#goto_aboutme">
+<img id="scroll_button" src="media\right-arrows-2x.png" />
+</a>
+</banner>
+</center>
+-->
+</div>
+
+	<!-- Hier zijn de afbeeldingen. de HREF is de link waar je heen gaat als je er op klikt en de src is de link van het plaatje dat je ziet. -->
+
+<div id="artContent">
+<center>
+	<div id="goto_work"></div>
+    <a target="_blank"><img  id="topmediacontainer" src="Fotos\meeskees.jpg"></a>
+    <a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos/cards.jpg"></a>
+	<a target="_blank"><img  id="topmediacontainer" src="Fotos\emdr-01.jpg"></a>
+    <a target="_blank"><img id="mediacontainer" src="Fotos\fireflush.jpg"></a>
+    <a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos\mockup.jpg"></a>
+	<a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos/sheet5.jpg"></a>
+ 	<a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos/sheet4.jpg"></a>
+ 	<a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos/sheet3.jpg"></a>
+	<a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos/sheet18.jpg"></a>
+    <a href="media\abyss.jpg"  target="_blank"><img id="mediacontainer" src="Fotos/sheet9.jpg"></a>
+
+</center>
+
+</body>
+<footer>
+  <script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 999999); // Change image every 3 seconds
+}
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+</footer>
+</html>

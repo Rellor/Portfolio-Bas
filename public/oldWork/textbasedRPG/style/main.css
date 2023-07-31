@@ -1,0 +1,186 @@
+.checkboxgrid {
+  display: block;
+  width: 250px;
+  position: absolute;
+  right: 10%;
+}
+
+.checkboxgrid input {
+  margin: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.marginleft {
+  margin-left: 12.5px;
+}
+
+.first {
+  margin-left: 11%;
+}
+
+label {
+  margin-right: 5%;
+}
+
+.visible {
+  opacity: 100%
+}
+
+.hidden {
+  display: none;
+}
+
+.attackbutton {
+  width: 250px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 1.6em;
+  margin: auto;
+  margin-top: 27px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.center {
+  display: block;
+}
+
+.playermenu {
+  color: black;
+  margin-top: 50px;
+}
+
+.playermenu .player {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  margin: 0px;
+  margin-bottom: -3px;
+}
+
+.shop {
+  position: fixed;
+  top: 8%;
+  left: 27.5%;
+  width: 750px;
+  height: 750px;
+  z-index: 99;
+  padding: 50px;
+}
+
+.shop button {
+  height: 30px;
+  width: 90px;
+  margin-left: 10px;
+}
+
+.close {
+  margin-bottom: 5%;
+  width: 20% !important;
+}
+
+.displayblock {
+  display: block;
+}
+
+.weapon {
+  position: fixed;
+  left: 51.1vw;
+  font-size: 2em;
+  top: 154px;
+  transform: rotate(90deg);
+  z-index: 98;
+  color: red;
+  letter-spacing: -8px;
+}
+
+.money {
+  width: 2.5%;
+  margin: auto;
+}
+
+.costumizer {
+  position: fixed;
+  z-index: 90;
+  left: 750px;
+}
+
+.costumizer div {
+  color: white;
+  display: flex;
+}
+
+.costumizer p {
+  color: white;
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+  border: 3px solid green;
+  width: 50px;
+  color: white;
+  width: 80px;
+  cursor: pointer;
+}
+
+.costumizer div p {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: 3px solid green;
+  font-family: 'Press Start 2P', cursive;
+  width: 50px;
+  cursor: pointer;
+}
+
+#filler {
+  opacity: 0%;
+  border: 2px solid green;
+  width: 200px;
+  padding: 5px;
+}
+
+.minus {
+  margin-right: 260px;
+}
+
+.stayandhidden {
+  opacity: 0%;
+  z-index: -1;
+}
+
+.youdied {
+  z-index: 101;
+  background-color: black;
+  border: 5px solid green;
+  position: fixed;
+  padding: 10%;
+  color: red;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8em;
+  margin: 10%;
+  cursor: pointer;
+}
+
+#map {
+  position: fixed;
+  margin-top: 5%;
+  margin-left: 20%;
+  border: 5px solid green;
+}
+
+span {
+  color: red;
+}
+
+#nomoney {
+  color: red;
+  width: 80%;
+  height: 10%;
+  font-size: 2em;
+}
