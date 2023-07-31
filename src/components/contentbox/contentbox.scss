@@ -1,9 +1,14 @@
+@import "src/app/variables.scss";
 .contentBox {
   display: flex;
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: 2rem;
   margin-bottom: 2rem;
+
+  p {
+    color: $c-black;
+  }
 }
 
 .textDiv {

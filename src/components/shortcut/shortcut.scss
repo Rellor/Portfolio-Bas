@@ -1,9 +1,10 @@
 @import "src/app/variables.scss";
 
 .shortcut {
-  width: 8.5rem;
+  width: 8rem;
   text-align: center;
   h3 {
+    font-size: 1rem;
     font-weight: normal;
     color: $c-black;
   }
