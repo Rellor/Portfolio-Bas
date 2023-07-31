@@ -18,6 +18,7 @@ export default function Home() {
   const [showWindowUnityGame, setShowWindowUnityGame] = useState(false);
   const [showWindowGorillaz, setShowWindowGorillaz] = useState(false);
   const [showWindowFrogwarts, setShowWindowFrogwarts] = useState(false);
+  const [showWindowMoyu, setShowWindowMoyu] = useState(false);
   const [showWindowRPG, setShowWindowRPG] = useState(false);
   let [zindex, setZindex] = useState(0);
 
@@ -50,6 +51,10 @@ export default function Home() {
 
   const sendDataToParentRPG = (index) => {
     setShowWindowRPG(index);
+  };
+
+  const sendDataToParentMoyu = (index) => {
+    setShowWindowMoyu(index);
   };
 
   const sendDataToParent = () => {
