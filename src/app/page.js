@@ -287,18 +287,16 @@ export default function Home() {
           >
             <TitleBlock title={"Welcome"} />
             <p className={styles.black}>
-              I am Bas! A passionate programmer and designer with a flair for
-              crafting innovative solutions. Nothing excites me more than diving
-              into a fresh project and getting my hands dirty. During my school
-              days, I honed my skills in HTML/CSS/Javascript and gained
-              expertise in frameworks like REACT. Additionally, I have also
-              worked on several C# projects within Unity, which I am very proud
-              of.
+              My name is Bas, a passionate programmer and designer driven by
+              creativity. My work reflects my love for innovative solutions, and
+              I take pride in crafting projects that showcase my perspective. My
+              expertise lies in HTML/CSS and JavaScript, while my exposure to
+              game design during my minor has also equipped me with proficiency
+              in Unity and C#.
               <br /> <br />
-              In my free time, I love both the social aspect of having a drink
-              with friends or playing video games together, as well as the
-              moments of pure relaxation when I am watching a movie or jamming
-              out to some music.
+              Beyond my professional hobby&apos;s, I love to have a drink with
+              friends or play games with them. I also am a huge fan of music and
+              movies.
             </p>
             <br />
             <p className={styles.black}>
@@ -310,7 +308,7 @@ export default function Home() {
 
         {showWindowMe && (
           <Window
-            title={"Me"}
+            title={"Bas"}
             sendDataToParent={sendDataToParentMe}
             sendMoreDataToParent={sendDataToParent}
             width={"17%"}
@@ -330,6 +328,8 @@ export default function Home() {
               height={250}
               className={styles.fotoBas}
             />
+            <p>Age: 23</p>
+            <p>Location: Purmerend, The Netherlands</p>
           </Window>
         )}
 
