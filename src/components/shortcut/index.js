@@ -39,7 +39,7 @@ export default function Shortcut({
   return (
     <div className="shortcut" style={ShortcutStyle}>
       <a onClick={openWindow}>
-        <Image src={src} width={70} height={70} alt={alt} />
+        {src ? <Image src={src} width={70} height={70} alt={alt} /> : null}
         <h3> {title} </h3>
       </a>
     </div>

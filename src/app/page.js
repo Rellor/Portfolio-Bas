@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 import styles from "./page.module.scss";
 
@@ -13,12 +14,14 @@ export default function Home() {
   //Open and close windows
   const [showWindowProjects, setShowWindowProjects] = useState(true);
   const [showWindowAboutme, setShowWindowAboutme] = useState(true);
+  const [showWindowMe, setShowWindowMe] = useState(false);
   const [showWindowContact, setShowWindowContact] = useState(true);
   const [showWindowBungie, setShowWindowBungie] = useState(false);
   const [showWindowUnityGame, setShowWindowUnityGame] = useState(false);
   const [showWindowGorillaz, setShowWindowGorillaz] = useState(false);
   const [showWindowFrogwarts, setShowWindowFrogwarts] = useState(false);
   const [showWindowMoyu, setShowWindowMoyu] = useState(false);
+  const [showWindowAjax, setShowWindowAjax] = useState(false);
   const [showWindowRPG, setShowWindowRPG] = useState(false);
   let [zindex, setZindex] = useState(0);
 
@@ -29,6 +32,11 @@ export default function Home() {
   const sendDataToParentAboutme = (index) => {
     setShowWindowAboutme(index);
   };
+
+  const sendDataToParentMe = (index) => {
+    setShowWindowMe(index);
+  };
+
   const sendDataToParentContact = (index) => {
     setShowWindowContact(index);
   };
@@ -55,6 +63,10 @@ export default function Home() {
 
   const sendDataToParentMoyu = (index) => {
     setShowWindowMoyu(index);
+  };
+
+  const sendDataToParentAjax = (index) => {
+    setShowWindowAjax(index);
   };
 
   const sendDataToParent = () => {
@@ -94,6 +106,16 @@ export default function Home() {
           alt={"ContactIcon"}
           sendDataToParent={sendDataToParentContact}
         />
+
+        <Shortcut
+          title={"Me"}
+          margin={"1rem"}
+          marginRight={"3rem"}
+          marginLeft={"auto"}
+          src={"/meIcon.png"}
+          alt={"Me Icon"}
+          sendDataToParent={sendDataToParentMe}
+        />
         {/*<Shortcut
           title={"Screensaver"}
           margin={"1rem"}
@@ -118,12 +140,32 @@ export default function Home() {
             topMobile={"10vh"}
           >
             <p className={styles.black}>Feel free to contact me!</p>
-            <a className={styles.black} href="mailto:basderoller@gmail.com">
+            <a
+              className={styles.black}
+              href="mailto:basderoller@gmail.com"
+              target="blank"
+            >
               Email: <span className={styles.blue}>Basderoller@gmail.com</span>
             </a>
             <br />
-            <a className={styles.black} href="tel:+31647520856">
+            <a className={styles.black} href="tel:+31647520856" target="blank">
               Nummer: <span className={styles.blue}>+31 647520856</span>
+            </a>
+            <br />
+            <a
+              className={styles.black}
+              href="https://www.linkedin.com/in/bas-de-roller-330733143/"
+              target="blank"
+            >
+              LinkedIn: <span className={styles.blue}>Bas de Roller</span>
+            </a>
+            <br />
+            <a
+              className={styles.black}
+              href="https://github.com/Rellor"
+              target="blank"
+            >
+              Github: <span className={styles.blue}>Rellor</span>
             </a>
           </Window>
         )}
@@ -144,6 +186,26 @@ export default function Home() {
             topMobile={"12vh"}
           >
             <div className={styles.projectContent}>
+              <Shortcut
+                title={"Ajax Business"}
+                margin={"1rem"}
+                marginRight={"1rem"}
+                marginLeft={"0"}
+                src={"/AjaxIcon.png"}
+                alt={"Ajax Icon"}
+                sendDataToParent={sendDataToParentAjax}
+              />
+
+              <Shortcut
+                title={"Moyu webshop"}
+                margin={"1rem"}
+                marginRight={"0rem"}
+                marginLeft={"0"}
+                src={"/MoyuIconPixels.png"}
+                alt={"Bungie.net Icon"}
+                sendDataToParent={sendDataToParentMoyu}
+              />
+
               <Shortcut
                 title={"Bungie.net"}
                 margin={"1rem"}
@@ -224,20 +286,49 @@ export default function Home() {
           >
             <TitleBlock title={"Welcome"} />
             <p className={styles.black}>
-              I am Bas, a passionate programmer and designer driven by
-              creativity. My work reflects my love for innovative solutions, and
-              I take pride in crafting projects that showcase my unique
-              perspective. My expertise lies in HTML/CSS and JavaScript, while
-              my exposure to game design during my minor has also equipped me
-              with proficiency in Unity and C#. Beyond my professional hobby’s,
-              I love to have a drink with friends or play games with them. I
-              also am a huge fan of music and movies.
+              I am Bas! A passionate programmer and designer with a flair for
+              crafting innovative solutions. Nothing excites me more than diving
+              into a fresh project and getting my hands dirty. During my school
+              days, I honed my skills in HTML/CSS/Javascript and gained
+              expertise in frameworks like REACT. Additionally, I have also
+              worked on several C# projects within Unity, which I am very proud
+              of.
+              <br /> <br />
+              In my free time, I love both the social aspect of having a drink
+              with friends or playing video games together, as well as the
+              moments of pure relaxation when I am watching a movie or jamming
+              out to some music.
             </p>
             <br />
             <p className={styles.black}>
               I am excited to show you what I&apos;ve been up to in my
               portfolio!
             </p>
+          </Window>
+        )}
+
+        {showWindowMe && (
+          <Window
+            title={"Me"}
+            sendDataToParent={sendDataToParentMe}
+            sendMoreDataToParent={sendDataToParent}
+            width={"17%"}
+            mobileWidth={"80%"}
+            height={"40%"}
+            mobileHeight={"70%"}
+            zindex={zindex}
+            left={"25vw"}
+            leftMobile={"5vw"}
+            top={"10vh"}
+            topMobile={"5vh"}
+          >
+            <Image
+              src={"/me.png"}
+              alt={"Me"}
+              width={250}
+              height={250}
+              className={styles.fotoBas}
+            />
           </Window>
         )}
 
@@ -256,8 +347,59 @@ export default function Home() {
             top={"12vh"}
             topMobile={"2vh"}
           >
-            <TitleBlock title={"Bungie.net"} />
+            <TitleBlock
+              title={"Bungie.net"}
+              extraData={<p>2022 - HTML/CSS/JavaScript</p>}
+            />
             <ContentBlock contentType={"Bungie"} />
+          </Window>
+        )}
+
+        {showWindowMoyu && (
+          <Window
+            title={"Moyu webshop"}
+            sendDataToParent={sendDataToParentMoyu}
+            sendMoreDataToParent={sendDataToParent}
+            width={"60%"}
+            mobileWidth={"90%"}
+            height={"80%"}
+            mobileHeight={"95%"}
+            zindex={zindex}
+            left={"15vw"}
+            leftMobile={"5vw"}
+            top={"12vh"}
+            topMobile={"2vh"}
+          >
+            <TitleBlock
+              title={"Moyu websop"}
+              extraData={
+                <p>2021 - HTML/CSS/JavaScript - Shopify/Sanity/Tailwind</p>
+              }
+            />
+            <ContentBlock contentType={"Moyu"} />
+          </Window>
+        )}
+
+        {showWindowAjax && (
+          <Window
+            title={"Ajax business"}
+            sendDataToParent={sendDataToParentAjax}
+            sendMoreDataToParent={sendDataToParent}
+            width={"60%"}
+            mobileWidth={"90%"}
+            height={"80%"}
+            mobileHeight={"95%"}
+            zindex={zindex}
+            left={"15vw"}
+            leftMobile={"5vw"}
+            top={"12vh"}
+            topMobile={"2vh"}
+          >
+            <TitleBlock
+              title={"Ajax business"}
+              extraData={<p>2023 - HTML/SCSS/JavaScript - React/Next.js</p>}
+            />
+            <ContentBlock contentType={"Ajax"} />
           </Window>
         )}
 
@@ -276,7 +418,10 @@ export default function Home() {
             top={"12vh"}
             topMobile={"2vh"}
           >
-            <TitleBlock title={"Pasta la vista"} />
+            <TitleBlock
+              title={"Pasta la vista"}
+              extraData={<p>2022 - C# - Unity</p>}
+            />
             <div className={styles.iframe}>
               <iframe
                 frameborder="0"
@@ -307,7 +452,10 @@ export default function Home() {
             top={"12vh"}
             topMobile={"2vh"}
           >
-            <TitleBlock title={"Momentary Bliss"} />
+            <TitleBlock
+              title={"Momentary Bliss"}
+              extraData={<p>2020 - Adobe after effects</p>}
+            />
             <ContentBlock contentType={"Gorillaz"} />
           </Window>
         )}
@@ -327,7 +475,10 @@ export default function Home() {
             top={"12vh"}
             topMobile={"2vh"}
           >
-            <TitleBlock title={"Frogwarts"} />
+            <TitleBlock
+              title={"Frogwarts"}
+              extraData={<p>2022 - C# - Unity</p>}
+            />
             <div className={styles.iframe}>
               <iframe
                 frameborder="0"
@@ -359,7 +510,10 @@ export default function Home() {
             top={"12vh"}
             topMobile={"2vh"}
           >
-            <TitleBlock title={"Text based RPG"} />
+            <TitleBlock
+              title={"Text based RPG"}
+              extraData={<p>2019 - HTML/CSS/JavaScript</p>}
+            />
             <ContentBlock contentType={"RPG"} />
           </Window>
         )}
