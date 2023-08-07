@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/ldb6adi.css");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "src/app/variables.scss";
 
 .main {
@@ -8,9 +8,7 @@
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  font-family: "space-mono", mono;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Space Mono", monospace;
 }
 .blue {
   color: $c-blue;
