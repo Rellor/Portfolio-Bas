@@ -176,7 +176,7 @@ export default function Home() {
             title={"Projects"}
             sendDataToParent={sendDataToParentProjects}
             sendMoreDataToParent={sendDataToParent}
-            width={"35%"}
+            width={"40%"}
             mobileWidth={"90%"}
             height={"45%"}
             mobileHeight={"70%"}
@@ -190,7 +190,7 @@ export default function Home() {
               <Shortcut
                 title={"Ajax Business"}
                 margin={"1rem"}
-                marginRight={"1rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/AjaxIcon.png"}
                 alt={"Ajax Icon"}
@@ -200,7 +200,7 @@ export default function Home() {
               <Shortcut
                 title={"Moyu webshop"}
                 margin={"1rem"}
-                marginRight={"0rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/MoyuIconPixels.png"}
                 alt={"Bungie.net Icon"}
@@ -210,7 +210,7 @@ export default function Home() {
               <Shortcut
                 title={"Bungie.net"}
                 margin={"1rem"}
-                marginRight={"0rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/BungienetIcon.png"}
                 alt={"Bungie.net Icon"}
@@ -220,7 +220,7 @@ export default function Home() {
               <Shortcut
                 title={"Pasta la vista"}
                 margin={"1rem"}
-                marginRight={"0rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/UnityGameIcon.png"}
                 alt={"Pasta la vista Icon"}
@@ -230,7 +230,7 @@ export default function Home() {
               <Shortcut
                 title={"Momentary bliss"}
                 margin={"1rem"}
-                marginRight={"0rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/MomentaryBlissIcon.png"}
                 alt={"Momentary bliss Icon"}
@@ -250,7 +250,7 @@ export default function Home() {
               <Shortcut
                 title={"Frogwarts"}
                 margin={"1rem"}
-                marginRight={"0rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/FrogwartsIcon.png"}
                 alt={"Frogwarts Icon"}
@@ -260,7 +260,7 @@ export default function Home() {
               <Shortcut
                 title={"Text based RPG"}
                 margin={"1rem"}
-                marginRight={"0rem"}
+                marginRight={"0.5rem"}
                 marginLeft={"0"}
                 src={"/TextRPGIcon.png"}
                 alt={"Text RPG Icon"}

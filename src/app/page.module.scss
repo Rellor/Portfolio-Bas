@@ -8,6 +8,7 @@
   height: 100vh;
   overflow: hidden;
   font-family: "Space Mono";
+  font-size: 0.95rem;
 }
 .blue {
   color: $c-blue;
@@ -33,6 +34,7 @@
 .projectContent {
   display: flex;
   flex-flow: wrap;
+  padding-bottom: 1rem;
 }
 
 .content {
