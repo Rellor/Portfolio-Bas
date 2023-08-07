@@ -323,7 +323,7 @@ export default function Home() {
             topMobile={"5vh"}
           >
             <Image
-              src={"/me.png"}
+              src={"/Bas.png"}
               alt={"Me"}
               width={250}
               height={250}
