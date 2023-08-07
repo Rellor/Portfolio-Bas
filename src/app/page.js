@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import styles from "./page.module.scss";
+import "./fonts.scss";
 
 import Navigation from "@/components/nav";
 import TitleBlock from "@/components/title";
