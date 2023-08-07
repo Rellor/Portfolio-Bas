@@ -198,16 +198,6 @@ export default function Home() {
               />
 
               <Shortcut
-                title={"Moyu webshop"}
-                margin={"1rem"}
-                marginRight={"0rem"}
-                marginLeft={"0"}
-                src={"/MoyuIconPixels.png"}
-                alt={"Bungie.net Icon"}
-                sendDataToParent={sendDataToParentMoyu}
-              />
-
-              <Shortcut
                 title={"Bungie.net"}
                 margin={"1rem"}
                 marginRight={"0rem"}
@@ -215,6 +205,16 @@ export default function Home() {
                 src={"/BungienetIcon.png"}
                 alt={"Bungie.net Icon"}
                 sendDataToParent={sendDataToParentBungie}
+              />
+
+              <Shortcut
+                title={"Moyu webshop"}
+                margin={"1rem"}
+                marginRight={"0rem"}
+                marginLeft={"0"}
+                src={"/MoyuIconPixels.png"}
+                alt={"Bungie.net Icon"}
+                sendDataToParent={sendDataToParentMoyu}
               />
 
               <Shortcut
