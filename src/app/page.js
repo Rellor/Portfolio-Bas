@@ -284,6 +284,7 @@ export default function Home() {
             leftMobile={"5vw"}
             top={"7vh"}
             topMobile={"5vh"}
+            className={styles.paddingBottom}
           >
             <TitleBlock title={"Welcome"} />
             <p className={styles.black}>
@@ -320,7 +321,7 @@ export default function Home() {
             leftMobile={"5vw"}
             top={"10vh"}
             topMobile={"5vh"}
-            className={styles.me}
+            className={styles.paddingBottom}
           >
             <Image
               src={"/Bas.png"}
