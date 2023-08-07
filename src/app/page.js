@@ -320,6 +320,7 @@ export default function Home() {
             leftMobile={"5vw"}
             top={"10vh"}
             topMobile={"5vh"}
+            className={styles.me}
           >
             <Image
               src={"/Bas.png"}
