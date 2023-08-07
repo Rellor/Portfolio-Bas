@@ -176,7 +176,7 @@ export default function Home() {
             title={"Projects"}
             sendDataToParent={sendDataToParentProjects}
             sendMoreDataToParent={sendDataToParent}
-            width={"40%"}
+            width={"36%"}
             mobileWidth={"90%"}
             height={"45%"}
             mobileHeight={"70%"}
