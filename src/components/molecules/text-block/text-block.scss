@@ -1,0 +1,16 @@
+@use "src/styles/variables" as *;
+
+.textDiv {
+  width: 46%;
+  min-width: 21rem;
+  color: $c-black;
+
+  p {
+    color: $c-black;
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    min-width: 100%;
+    max-width: 12.5rem;
+  }
+}

@@ -1,0 +1,11 @@
+@use "src/styles/variables" as *;
+
+// Text inherits its colour from the surrounding component by default, so a
+// paragraph on the black navigation bar stays white.
+.text--body {
+  color: $c-black;
+}
+
+.text--accent {
+  color: $c-blue;
+}

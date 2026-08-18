@@ -1,14 +1,14 @@
-import "./globals.css";
 import { Inter } from "next/font/google";
 
-import Background from "@/components/background";
+import Background from "@/components/organisms/background";
+import { site } from "@/content/site";
+
+import "@/styles/globals.css";
+import "@/styles/fonts.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Bas de Roller",
-  description: "Created by Bas de Roller",
-};
+export const metadata = site.metadata;
 
 export default function RootLayout({ children }) {
   return (
