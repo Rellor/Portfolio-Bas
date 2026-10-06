@@ -11,8 +11,8 @@ import Text from "@/components/atoms/text";
 import ContactList from "@/components/molecules/contact-list";
 import ProfileCard from "@/components/molecules/profile-card";
 import TitleBlock from "@/components/molecules/title-block";
-import SkillsTimeline from "@/components/organisms/skills-timeline";
-import { skillGroups, skillYears } from "@/content/skills";
+import SkillsOverview from "@/components/organisms/skills-overview";
+import { skillGroups } from "@/content/skills";
 
 export const site = {
   name: "Bas de Roller",
@@ -141,7 +141,8 @@ export const windows = [
     accent: "crimson",
     openByDefault: true,
     layout: {
-      width: "34%",
+      width: "36%",
+      minWidth: "28rem",
       height: "84%",
       mobileWidth: "90%",
       mobileHeight: "80%",
@@ -169,8 +170,8 @@ export const windows = [
           Unity and C# to the mix.
         </Text>
         <br />
-        <TitleBlock title="Skills over the years" size="small" />
-        <SkillsTimeline years={skillYears} groups={skillGroups} />
+        <TitleBlock title="Skills and tools" size="small" />
+        <SkillsOverview groups={skillGroups} />
         <br />
         <TitleBlock title="Working with AI" size="small" />
         <Text variant="body">

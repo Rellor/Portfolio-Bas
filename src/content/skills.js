@@ -1,28 +1,24 @@
 /**
- * The skills overview in the About window: which tools were used in which
- * year. The years come from GitHub (my own repos plus the airport repos), so
- * a tool only shows up in a year when there is code for it.
+ * The skills overview in the About window: the tools used in projects found on
+ * GitHub, plus the ones from the Fyris and Framna work. The icons are pixelized
+ * logos in /public/skills (from Simple Icons, CC0).
  *
- * To add a tool, put it in the right group with the years it was used. To add
- * a year, extend `skillYears`.
+ * To add a tool, drop a pixel icon in /public/skills and add it to a group.
  */
 
-export const skillYears = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+const icon = (slug) => ({ src: `/skills/${slug}.png`, alt: "" });
 
-/**
- * `color` is one of the colours in `$skill-colors`
- * (src/components/organisms/skills-timeline/skills-timeline.scss).
- */
 export const skillGroups = [
   {
     id: "languages",
     title: "Languages",
     color: "pink",
     skills: [
-      { name: "HTML", years: [2020, 2021, 2022, 2023, 2026] },
-      { name: "CSS", years: [2020, 2021, 2022, 2023, 2026] },
-      { name: "JavaScript", years: [2020, 2021, 2022, 2023, 2026] },
-      { name: "TypeScript", years: [2026] },
+      { name: "HTML", icon: icon("html5") },
+      { name: "CSS", icon: icon("css3") },
+      { name: "JavaScript", icon: icon("javascript") },
+      { name: "TypeScript", icon: icon("typescript") },
+      { name: "C#", icon: icon("csharp") },
     ],
   },
   {
@@ -30,9 +26,12 @@ export const skillGroups = [
     title: "Frameworks",
     color: "blue",
     skills: [
-      { name: "React", years: [2021, 2022, 2023, 2026] },
-      { name: "Next.js", years: [2021, 2022, 2023, 2026] },
-      { name: "Node + Express", years: [2021] },
+      { name: "React", icon: icon("react") },
+      { name: "Next.js", icon: icon("nextdotjs") },
+      { name: "Node.js", icon: icon("nodedotjs") },
+      { name: "Express", icon: icon("express") },
+      { name: "Radix UI", icon: icon("radixui") },
+      { name: "Unity", icon: icon("unity") },
     ],
   },
   {
@@ -40,10 +39,9 @@ export const skillGroups = [
     title: "Styling",
     color: "yellow",
     skills: [
-      { name: "Sass / SCSS", years: [2020, 2023, 2026] },
-      { name: "Tailwind CSS", years: [2022, 2026] },
-      { name: "styled-components", years: [2022] },
-      { name: "Emotion", years: [2026] },
+      { name: "Sass", icon: icon("sass") },
+      { name: "Tailwind CSS", icon: icon("tailwindcss") },
+      { name: "styled-components", icon: icon("styledcomponents") },
     ],
   },
   {
@@ -51,10 +49,11 @@ export const skillGroups = [
     title: "Data and content",
     color: "green",
     skills: [
-      { name: "D3", years: [2021, 2022] },
-      { name: "MongoDB", years: [2021] },
-      { name: "Contentful", years: [2026] },
-      { name: "Algolia", years: [2026] },
+      { name: "D3", icon: icon("d3dotjs") },
+      { name: "MongoDB", icon: icon("mongodb") },
+      { name: "Contentful", icon: icon("contentful") },
+      { name: "Directus", icon: icon("directus") },
+      { name: "Algolia", icon: icon("algolia") },
     ],
   },
   {
@@ -62,10 +61,12 @@ export const skillGroups = [
     title: "Testing and tooling",
     color: "purple",
     skills: [
-      { name: "Jest", years: [2026] },
-      { name: "Vitest", years: [2026] },
-      { name: "Storybook", years: [2026] },
-      { name: "Playwright", years: [2026] },
+      { name: "Jest", icon: icon("jest") },
+      { name: "Vitest", icon: icon("vitest") },
+      { name: "Storybook", icon: icon("storybook") },
+      { name: "Playwright", icon: icon("playwright") },
+      { name: "Figma", icon: icon("figma") },
+      { name: "GitHub", icon: icon("github") },
     ],
   },
 ];
