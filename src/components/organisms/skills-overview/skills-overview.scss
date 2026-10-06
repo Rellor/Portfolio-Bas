@@ -1,0 +1,72 @@
+@use "src/styles/variables" as *;
+
+// The same colours as the blocks on the desktop background.
+$skill-colors: (
+  "pink": #ff4fa3,
+  "blue": #3fa9f5,
+  "yellow": #ffd23f,
+  "green": #7bd957,
+  "purple": #b06cff,
+  "orange": #ff8a3d,
+);
+
+.skills {
+  @include bevel-in;
+  background-color: $c-face-light;
+  padding: 0.75rem;
+}
+
+.skills__group + .skills__group {
+  margin-top: 0.9rem;
+}
+
+// A small coloured block in front of each title, like a desktop tile.
+.skills__groupTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: $font-size-small;
+  font-weight: bold;
+  color: $c-navy;
+  margin-bottom: 0.4rem;
+
+  &::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    box-shadow:
+      inset 2px 2px 0 rgba(255, 255, 255, 0.45),
+      inset -2px -2px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@each $name, $colour in $skill-colors {
+  .skills__group--#{$name} .skills__groupTitle::before {
+    background-color: $colour;
+  }
+}
+
+// The tools wrap onto as many lines as the window width allows.
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+}
+
+.skills__item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.3rem;
+  background-color: $c-white;
+  border: 1px solid $c-face-dark;
+  color: $c-black;
+  font-size: $font-size-small;
+  white-space: nowrap;
+}
+
+.skills__icon {
+  // Keep the pixels sharp if the icon is ever scaled.
+  image-rendering: pixelated;
+}
