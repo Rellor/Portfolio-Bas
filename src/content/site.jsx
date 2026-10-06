@@ -40,32 +40,35 @@ const contactEntries = [
 ];
 
 /**
- * The icons on the desktop, top to bottom. `spacing.top` is the gap above the
+ * The icons on the desktop, top to bottom. The first four come in two sets: the
+ * redrawn ones in /public/desktop (used here) and the original ones in /public
+ * (projectsIcon.png, aboutIcon.png, contactIcon.png and MeIcon.png). To go back
+ * to the originals, change the `src` of that shortcut. `spacing.top` is the gap above the
  * icon on desktop, `spacing.topMobile` the gap on small screens.
  */
 export const shortcuts = [
   {
     id: "projects",
     title: "Projects",
-    icon: { src: "/projectsIcon.png", alt: "ProjectsIcon" },
+    icon: { src: "/desktop/projects.png", alt: "ProjectsIcon" },
     spacing: { top: "1rem", topMobile: "0.5rem", right: "3rem", left: "auto" },
   },
   {
     id: "about",
     title: "About",
-    icon: { src: "/aboutIcon.png", alt: "AboutIcon" },
+    icon: { src: "/desktop/about.png", alt: "AboutIcon" },
     spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
   {
     id: "contact",
     title: "Contact",
-    icon: { src: "/contactIcon.png", alt: "ContactIcon" },
+    icon: { src: "/desktop/contact.png", alt: "ContactIcon" },
     spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
   {
     id: "me",
     title: "Me",
-    icon: { src: "/MeIcon.png", alt: "Me Icon" },
+    icon: { src: "/desktop/me.png", alt: "Me Icon" },
     spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
   {
