@@ -1,0 +1,92 @@
+@use "src/styles/variables" as *;
+
+.startMenu {
+  @include bevel-out;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  display: flex;
+  background-color: $c-face;
+  min-width: 15rem;
+  max-width: calc(100vw - 1rem);
+  max-height: 70vh;
+}
+
+// The strip down the side, with the name written upwards.
+.startMenu__banner {
+  flex: none;
+  width: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(0deg, $c-navy-light, $c-navy);
+  color: $c-white;
+  font-weight: bold;
+  padding: 0.5rem 0;
+
+  span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+}
+
+.startMenu__list {
+  flex: 1;
+  list-style: none;
+  padding: 2px;
+  overflow-y: auto;
+}
+
+.startMenu__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.3rem 0.6rem;
+  background: none;
+  border: none;
+  font: inherit;
+  color: $c-black;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $c-navy;
+    color: $c-white;
+    outline: none;
+  }
+}
+
+.startMenu__item--small {
+  font-size: $font-size-small;
+  padding: 0.2rem 0.6rem 0.2rem 2.4rem;
+}
+
+.startMenu__chevron {
+  margin-left: auto;
+}
+
+.startMenu__group {
+  font-size: $font-size-small;
+  font-weight: bold;
+  color: $c-navy;
+  padding: 0.4rem 0.6rem 0.1rem 2.4rem;
+}
+
+.startMenu__divider {
+  height: 2px;
+  margin: 0.25rem 0.25rem;
+  border-top: 1px solid $c-face-dark;
+  border-bottom: 1px solid $c-white;
+}
+
+.startMenu__restart {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background:
+    radial-gradient(circle at center, transparent 5px, currentColor 5px, currentColor 8px, transparent 8px)
+    center / 22px 22px no-repeat;
+}

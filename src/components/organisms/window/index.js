@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Draggable from "react-draggable";
 
 import CloseButton from "@/components/atoms/close-button";
+import TitleButton from "@/components/atoms/title-button";
 import Text from "@/components/atoms/text";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { accentFor } from "@/styles/accents";
@@ -30,6 +31,10 @@ import "./window.scss";
  * @param {string} [props.accent] Title bar colour, one of `ACCENTS`. Defaults to
  *   a stable colour picked from the title.
  * @param {number} [props.zIndex]
+ * @param {boolean} [props.isMinimized] Hidden, but kept so it can come back.
+ * @param {boolean} [props.isMaximized] Fills the whole desktop area.
+ * @param {() => void} [props.onMinimize]
+ * @param {() => void} [props.onToggleMaximize]
  * @param {() => void} props.onClose
  * @param {() => void} props.onFocus Called when the window is clicked or dragged.
  */
@@ -39,6 +44,10 @@ export default function Window({
   layout = {},
   accent,
   zIndex = 0,
+  isMinimized = false,
+  isMaximized = false,
+  onMinimize,
+  onToggleMaximize,
   onClose,
   onFocus,
 }) {
@@ -61,10 +70,18 @@ export default function Window({
       handle=".window__handle"
       bounds="parent"
       onStart={onFocus}
+      disabled={isMaximized}
     >
       <div
         ref={nodeRef}
-        className={`window window--${accent ?? accentFor(title)}`}
+        className={[
+          "window",
+          `window--${accent ?? accentFor(title)}`,
+          isMaximized ? "window--maximized" : "",
+          isMinimized ? "window--minimized" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
         style={style}
         onClick={onFocus}
       >
@@ -72,7 +89,26 @@ export default function Window({
           <div className="window__handle">
             <Text>{title}</Text>
           </div>
-          <CloseButton onClose={onClose} label={`Close ${title}`} />
+          <div className="window__controls">
+            {onMinimize ? (
+              <TitleButton onClick={onMinimize} label={`Minimize ${title}`}>
+                <span className="titleButton__glyph titleButton__glyph--minimize" />
+              </TitleButton>
+            ) : null}
+            {onToggleMaximize ? (
+              <TitleButton
+                onClick={onToggleMaximize}
+                label={`${isMaximized ? "Restore" : "Maximize"} ${title}`}
+              >
+                <span
+                  className={`titleButton__glyph titleButton__glyph--${
+                    isMaximized ? "restore" : "maximize"
+                  }`}
+                />
+              </TitleButton>
+            ) : null}
+            <CloseButton onClose={onClose} label={`Close ${title}`} />
+          </div>
         </div>
 
         <div className="window__body">{children}</div>

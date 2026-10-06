@@ -3,7 +3,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100vh;
   overflow: hidden;
@@ -13,8 +12,30 @@
 
 .content {
   position: relative;
-  height: 100%;
+  // Takes what the top bar and the taskbar leave over.
+  flex: 1;
+  min-height: 0;
   width: 100%;
+}
+
+// The icons sit in a column on the right and start a second column when the
+// screen is too short for all of them.
+.shortcuts {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  // Behind the windows, which are positioned and come later.
+  z-index: 0;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
 }
 
 @media screen and (max-width: $bp-mobile) {

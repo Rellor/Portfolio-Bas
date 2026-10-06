@@ -11,27 +11,18 @@ import Window from "@/components/organisms/window";
  * @param {object} props.layout Passed straight to `Window`.
  * @param {{id: string, title: string, projects: object[]}[]} props.groups
  * @param {(projectId: string) => void} props.onOpenProject
- * @param {number} props.zIndex
- * @param {() => void} props.onClose
- * @param {() => void} props.onFocus
+ * @param {object} props.windowProps Everything else (z-index, accent, minimize
+ *   and maximize handlers, ...) goes straight to `Window`.
  */
 export default function ProjectsWindow({
   title,
   layout,
   groups,
   onOpenProject,
-  zIndex,
-  onClose,
-  onFocus,
+  ...windowProps
 }) {
   return (
-    <Window
-      title={title}
-      layout={layout}
-      zIndex={zIndex}
-      onClose={onClose}
-      onFocus={onFocus}
-    >
+    <Window title={title} layout={layout} {...windowProps}>
       {groups.map((group) => (
         <ShortcutGroup
           key={group.id}

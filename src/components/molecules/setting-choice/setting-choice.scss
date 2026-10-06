@@ -1,0 +1,66 @@
+@use "src/styles/variables" as *;
+
+.settingChoice {
+  border: none;
+  margin-bottom: 1.25rem;
+}
+
+.settingChoice__label {
+  color: $c-black;
+  padding: 0;
+}
+
+.settingChoice__description {
+  font-size: $font-size-small;
+  color: $c-grey-dark;
+  margin-bottom: 0.5rem;
+}
+
+.settingChoice__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.settingChoice__option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  color: $c-black;
+  @include bevel-out;
+  background-color: $c-face;
+}
+
+// The radio itself is hidden, the pressed button shows what is selected.
+.settingChoice__input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.settingChoice__option:has(.settingChoice__input:checked) {
+  @include bevel-in;
+  background-color: $c-face-light;
+  font-weight: bold;
+}
+
+.settingChoice__option:has(.settingChoice__input:focus-visible) {
+  outline: 1px dotted $c-black;
+  outline-offset: -5px;
+}
+
+.settingChoice__swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 1px solid $c-black;
+}
+
+.settingChoice__text {
+  font-size: $font-size-small;
+}

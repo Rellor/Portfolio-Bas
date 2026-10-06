@@ -9,26 +9,16 @@ import Window from "@/components/organisms/window";
  * @param {string} props.title
  * @param {object} props.layout Passed straight to `Window`.
  * @param {{id: string, label: string, description?: string, checked: boolean, onChange: (checked: boolean) => void}[]} props.settings
- * @param {number} props.zIndex
- * @param {() => void} props.onClose
- * @param {() => void} props.onFocus
+ * @param {object} props.windowProps Everything else goes straight to `Window`.
  */
 export default function SettingsWindow({
   title,
   layout,
   settings,
-  zIndex,
-  onClose,
-  onFocus,
+  ...windowProps
 }) {
   return (
-    <Window
-      title={title}
-      layout={layout}
-      zIndex={zIndex}
-      onClose={onClose}
-      onFocus={onFocus}
-    >
+    <Window title={title} layout={layout} {...windowProps}>
       <TitleBlock title="Display" size="small" />
       {settings.map((setting) => (
         <SettingToggle key={setting.id} {...setting} />

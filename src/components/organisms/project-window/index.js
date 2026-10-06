@@ -9,21 +9,13 @@ import Window from "@/components/organisms/window";
  *
  * @param {object} props
  * @param {import("@/content/projects").Project} props.project
- * @param {number} props.zIndex
- * @param {() => void} props.onClose
- * @param {() => void} props.onFocus
+ * @param {object} props.windowProps Everything else goes straight to `Window`.
  */
-export default function ProjectWindow({ project, zIndex, onClose, onFocus }) {
+export default function ProjectWindow({ project, ...windowProps }) {
   const { title, windowTitle, heading, meta, layout, embed, blocks } = project;
 
   return (
-    <Window
-      title={windowTitle ?? title}
-      layout={layout}
-      zIndex={zIndex}
-      onClose={onClose}
-      onFocus={onFocus}
-    >
+    <Window title={windowTitle ?? title} layout={layout} {...windowProps}>
       <TitleBlock title={heading ?? title} meta={meta} />
       {embed ? <EmbedBlock {...embed} /> : null}
       <ContentBlocks blocks={blocks} />

@@ -48,5 +48,16 @@ $bevel-layers: (
   z-index: -1;
   // The bevel paints on top, so the coloured blocks look like tiles too.
   background: list.join($bevel-layers, accent-layers(), comma);
-  background-color: $c-desktop;
+  background-color: var(--desktop-color);
+}
+
+// The other wallpapers from Settings: only the grid, or just the colour.
+html[data-wallpaper="grid"] .background {
+  background: $bevel-layers;
+  background-color: var(--desktop-color);
+}
+
+html[data-wallpaper="plain"] .background {
+  background: none;
+  background-color: var(--desktop-color);
 }
