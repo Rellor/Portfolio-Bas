@@ -117,8 +117,8 @@ export const projects = [
           <Text variant="body">
             Metis is a monitoring tool for public affairs, communication and
             policy teams. It keeps track of politics with AI summaries, alerts
-            and comments from experts. For Fyris I designed and built the
-            product website, which you can find at{" "}
+            and comments from experts. Design and front-end of the product
+            website were built for Fyris, and it lives at{" "}
             <Link href="https://metismonitor.nl">metismonitor.nl</Link>.
           </Text>
         ),
@@ -171,7 +171,7 @@ export const projects = [
           <Text variant="body">
             StakeCircle is software for stakeholder management, made by and for
             public affairs professionals. It covers the whole cycle from
-            logging contact to planning your next move. The product website
+            logging contact to planning the next move. The product website
             lives at{" "}
             <Link href="https://stakecircle.nl/en">stakecircle.nl</Link>.
           </Text>
@@ -179,7 +179,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "I designed it in Figma and built it with Next.js and Tailwind CSS, in Dutch and English. D3 draws the interactive network graph, which shows how stakeholders connect, and Radix UI and Lucide cover the components and icons.",
+        text: "The design was made in Figma and built with Next.js and Tailwind CSS, in Dutch and English. D3 draws the interactive network graph, which shows how stakeholders connect, and Radix UI and Lucide cover the components and icons.",
       },
     ],
   },
@@ -197,8 +197,8 @@ export const projects = [
         content: (
           <Text variant="body">
             The Kloosterkerk is a church in the centre of The Hague with a full
-            agenda of services, concerts and events. I designed and built the
-            website, which is live at{" "}
+            agenda of services, concerts and events. Design and front-end of
+            the website were done for them, and it is live at{" "}
             <Link href="https://www.kloosterkerk.nl">kloosterkerk.nl</Link>.
           </Text>
         ),
@@ -227,11 +227,11 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            This project was my introduction to building a responsive website.
-            To give all attention to the code I picked an existing site as the
+            This project was the introduction to building a responsive website.
+            To give all attention to the code, an existing site served as the
             design: <Link href="https://www.bungie.net/7/en/Destiny">bungie.net</Link>.
-            Breakpoints make sure it works on both mobile and desktop, and I&apos;m
-            happy with how it turned out. You can see the result with{" "}
+            Breakpoints make sure it works on both mobile and desktop, and the
+            end result turned out well. See it with{" "}
             <Link href="/oldWork/basiswebsite/index.html">this link</Link>.
           </Text>
         ),
@@ -279,7 +279,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "At Moyu I worked with Shopify, which lets sellers set up a professional webshop. I helped manage and optimise the shop to make things a bit smoother for customers.",
+        text: "At Moyu the work revolved around Shopify, which lets sellers set up a professional webshop. Managing and optimising the shop made things a bit smoother for customers.",
       },
       {
         type: "image",
@@ -288,7 +288,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Together with other developers I set up a content management system in Sanity. That made publishing content and updating the website a lot simpler.",
+        text: "Together with other developers a content management system was set up in Sanity, which made publishing content and updating the website a lot simpler.",
       },
       {
         type: "image",
@@ -297,7 +297,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "I also designed several parts of the new website and built them out into one consistent whole, which strengthened the look and feel of the brand.",
+        text: "Several parts of the new website were designed and built out into one consistent whole, which strengthened the look and feel of the brand.",
       },
     ],
   },
@@ -317,7 +317,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "My long internship at Ajax Business is where my programming skills grew the most. I could apply it right away to the portfolio you're looking at now.",
+        text: "The long internship at Ajax Business is where programming skills grew the most, and they went straight into the portfolio you're looking at now.",
       },
       {
         type: "image",
@@ -326,11 +326,11 @@ export const projects = [
       },
       {
         type: "text",
-        text: "In this project I learned to set up a React project with atomic design and to build components that talk to an API. SASS kept the CSS organised.",
+        text: "This project was about setting up a React project with atomic design and building components that talk to an API. SASS kept the CSS organised.",
       },
       {
         type: "text",
-        text: "Unfortunately there isn't much to show yet, since the project is still unreleased. Curious about the approach or the technical side? Ask me, I'm happy to talk about it.",
+        text: "Unfortunately there isn't much to show yet, since the project is still unreleased. Curious about the approach or the technical side? Just ask, always happy to talk about it.",
       },
     ],
   },
@@ -367,7 +367,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "My answer was Pasta la vista, a platformer where you play a piece of pasta finding its way through a strange world full of black holes, spinning locations, flying food and an evil wizard.",
+        text: "The answer was Pasta la vista, a platformer where you play a piece of pasta finding its way through a strange world full of black holes, spinning locations, flying food and an evil wizard.",
       },
       {
         type: "image",
@@ -378,8 +378,9 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            It got a 10, which I&apos;m pretty proud of. You can play it on itch.io
-            via <Link href="https://rellor10.itch.io/pasta-la-vista">this link</Link>.
+            It got a 10, something to be pretty proud of. You can play it on
+            itch.io via{" "}
+            <Link href="https://rellor10.itch.io/pasta-la-vista">this link</Link>.
             Have fun!
           </Text>
         ),
@@ -401,7 +402,7 @@ export const projects = [
         content: (
           <Text variant="body">
             One of the most fun projects so far. The assignment was to pick a
-            song and shape the lyrics around it, and I went with{" "}
+            song and shape the lyrics around it, and the pick was{" "}
             <Link href="https://www.youtube.com/watch?v=QTt7301PR5k&ab_channel=Gorillaz">
               Momentary Bliss
             </Link>{" "}
@@ -416,7 +417,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "First came the title designs. I made 4 and picked the one that fit the lyrics, the title and the style of the music best.",
+        text: "First came the title designs. Four were made, and the one that fit the lyrics, the title and the style of the music best won.",
       },
       {
         type: "image",
@@ -425,7 +426,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "With that design I worked on a GIF that became the final video. The goal was to show the chaos of the song with fast moving drawings, which is also the style of the actual music video.",
+        text: "That design grew into a GIF that became the final video. The goal was to show the chaos of the song with fast moving drawings, which is also the style of the actual music video.",
       },
     ],
   },
@@ -453,7 +454,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Frogwarts is the result of the first team project of the game design minor. We were a team of 5 and I was the main developer, which also made me responsible for delivering the game.",
+        text: "Frogwarts is the result of the first team project of the game design minor. The team of 5 had me as main developer, which also meant being responsible for delivering the game.",
       },
       {
         type: "image",
@@ -462,7 +463,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "You play a first year student at a magical school whose frog escapes. Going after it leads you to a forbidden floor full of monsters. Fight them, upgrade and take down the boss!",
+        text: "You play a first year student at a magical school whose frog escapes. Going after it leads to a forbidden floor full of monsters. Fight them, upgrade and take down the boss!",
       },
       {
         type: "image",

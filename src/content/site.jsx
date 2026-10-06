@@ -11,6 +11,8 @@ import Text from "@/components/atoms/text";
 import ContactList from "@/components/molecules/contact-list";
 import ProfileCard from "@/components/molecules/profile-card";
 import TitleBlock from "@/components/molecules/title-block";
+import SkillsTimeline from "@/components/organisms/skills-timeline";
+import { skillGroups, skillYears } from "@/content/skills";
 
 export const site = {
   name: "Bas de Roller",
@@ -106,12 +108,12 @@ export const windows = [
     accent: "navy",
     openByDefault: true,
     layout: {
-      width: "50%",
+      width: "48%",
       // The biggest window on the desktop, so all project sections fit.
       height: "72%",
       mobileWidth: "90%",
       mobileHeight: "80%",
-      left: "33vw",
+      left: "38vw",
       top: "22vh",
       leftMobile: "5vw",
       topMobile: "10vh",
@@ -139,10 +141,10 @@ export const windows = [
     accent: "crimson",
     openByDefault: true,
     layout: {
-      width: "30%",
-      height: "75%",
-      mobileWidth: "80%",
-      mobileHeight: "70%",
+      width: "34%",
+      height: "84%",
+      mobileWidth: "90%",
+      mobileHeight: "80%",
       left: "2vw",
       top: "7vh",
       leftMobile: "5vw",
@@ -152,24 +154,42 @@ export const windows = [
       <>
         <TitleBlock title="Welcome" />
         <Text variant="body">
-          My name is Bas, a passionate programmer and designer driven by
-          creativity. My work reflects my love for innovative solutions, and I
-          take pride in crafting projects that showcase my perspective. I
-          mainly build websites with React, Next.js and TypeScript, styled with
-          SCSS or Tailwind CSS and powered by a headless CMS like Contentful or
-          Directus, including the content models and migrations. I design the
-          sites in Figma first. Along the way I worked with Radix UI, Algolia
-          search, D3 and Mailchimp. I care about accessibility and testing, and
-          I use Storybook, Vitest and Playwright for that. My game design minor
-          also gave me experience with Unity and C#.
-          <br /> <br />
-          Beyond my professional hobby&apos;s, I love to have a drink with
-          friends or play games with them. I also am a huge fan of music and
-          movies.
+          My name is Bas, a programmer and designer driven by creativity.
+          Innovative solutions are what get the work going, and the projects
+          here show the perspective behind them.
         </Text>
         <br />
         <Text variant="body">
-          I am excited to show you what I&apos;ve been up to in my portfolio!
+          Most of it is websites built with React, Next.js and TypeScript,
+          styled with SCSS or Tailwind CSS and powered by a headless CMS like
+          Contentful or Directus, content models and migrations included. Every
+          site starts in Figma. Radix UI, Algolia, D3 and Mailchimp came along
+          the way, and accessibility and testing (Storybook, Vitest,
+          Playwright) are part of the routine. The game design minor added
+          Unity and C# to the mix.
+        </Text>
+        <br />
+        <TitleBlock title="Skills over the years" size="small" />
+        <SkillsTimeline years={skillYears} groups={skillGroups} />
+        <br />
+        <TitleBlock title="Working with AI" size="small" />
+        <Text variant="body">
+          AI is part of the daily workflow, like a fast second pair of eyes. It
+          helps with boilerplate, explains unfamiliar code, reviews changes and
+          tries out ideas.
+        </Text>
+        <br />
+        <Text variant="body">
+          It doesn&apos;t replace the thinking though. Code still gets written,
+          read and understood by hand, and new things get learned properly
+          instead of copied. That way AI saves time on the boring parts and
+          leaves more room to keep growing as a developer.
+        </Text>
+        <br />
+        <TitleBlock title="Outside of work" size="small" />
+        <Text variant="body">
+          Usually a drink with friends, a game or some music and movies. Have a
+          look around the portfolio to see what has been going on!
         </Text>
       </>
     ),
