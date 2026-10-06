@@ -106,15 +106,15 @@ export const windows = [
     accent: "navy",
     openByDefault: true,
     layout: {
-      width: "36%",
-      // Taller than the other small windows so both project sections fit.
-      height: "55%",
+      width: "50%",
+      // The biggest window on the desktop, so all project sections fit.
+      height: "72%",
       mobileWidth: "90%",
-      mobileHeight: "70%",
+      mobileHeight: "80%",
       left: "33vw",
-      top: "40vh",
+      top: "22vh",
       leftMobile: "5vw",
-      topMobile: "12vh",
+      topMobile: "10vh",
     },
   },
   {
@@ -154,10 +154,13 @@ export const windows = [
         <Text variant="body">
           My name is Bas, a passionate programmer and designer driven by
           creativity. My work reflects my love for innovative solutions, and I
-          take pride in crafting projects that showcase my perspective. My
-          expertise lies in HTML/CSS and JavaScript, while my exposure to game
-          design during my minor has also equipped me with proficiency in Unity
-          and C#.
+          take pride in crafting projects that showcase my perspective. I
+          mainly build websites with React, Next.js and TypeScript, styled with
+          SCSS and powered by Contentful as a headless CMS, including the
+          content models and migrations. Along the way I worked with Radix UI,
+          Algolia search and Mailchimp. I care about accessibility and testing,
+          and I use Storybook, Vitest and Playwright for that. My game design minor also gave me experience with Unity and
+          C#.
           <br /> <br />
           Beyond my professional hobby&apos;s, I love to have a drink with
           friends or play games with them. I also am a huge fan of music and

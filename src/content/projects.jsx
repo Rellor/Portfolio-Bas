@@ -44,6 +44,65 @@ export const PROJECT_LAYOUT = {
 
 export const projects = [
   {
+    id: "rdu",
+    title: "RDU Airport",
+    windowTitle: "Raleigh-Durham Airport (RDU)",
+    heading: "Raleigh-Durham Airport",
+    meta: "2026 - Framna - React/Next.js/TypeScript - Contentful/SCSS - Radix UI - Storybook/Vitest - Mailchimp",
+    icon: { src: "/RduIcon.png", alt: "RDU Airport Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            Framna rebuilt the website of Raleigh-Durham International Airport.
+            The old site was hard to use and even harder to change, so the new
+            one runs on Contentful with a new design system. It&apos;s live at{" "}
+            <Link href="https://www.rdu.com">rdu.com</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "My part was a big chunk of the front end: the reusable components, the header, flight search and flight lists, the news section and the interactive airport map. On top of that came the Contentful content models and migrations behind them.",
+      },
+      {
+        type: "text",
+        text: "Towards the launch it was mostly design feedback, content checks and getting every release through test, acceptance and production.",
+      },
+    ],
+  },
+  {
+    id: "ric",
+    title: "RIC Airport",
+    windowTitle: "Richmond Airport (RIC)",
+    heading: "Richmond Airport",
+    meta: "2026 - Framna - React/Next.js/TypeScript - Contentful/SCSS - Algolia - Storybook/Vitest",
+    icon: { src: "/RicIcon.png", alt: "RIC Airport Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            Richmond International Airport was the second airport site at
+            Framna. It&apos;s live at{" "}
+            <Link href="https://flyrichmond.com">flyrichmond.com</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "The design came from another agency and we turned it into a Contentful website, so the airport can manage its own content. Most of my time went into the flight list and flight details, parking availability, search and making the forms more accessible.",
+      },
+      {
+        type: "text",
+        text: "Both airports share the same foundation, so a lot of the RDU work could be reused here. For the launch there were also redirects from the old site, security settings and the releases to take care of.",
+      },
+    ],
+  },
+  {
     id: "bungie",
     title: "Bungie.net",
     windowTitle: "Bungie.net",
@@ -61,13 +120,11 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            In this project, I started learning how to make a responsive
-            webpage. In order to give full attention to coding, I chose to use an
-            existing website. This website became{" "}
-            <Link href="https://www.bungie.net/7/en/Destiny">bungie.net</Link>.
-            For this project I used breakpoints to make sure the website is
-            usable on mobile and desktop. I am very pleased with the end result.
-            You can see it with{" "}
+            This project was my introduction to building a responsive website.
+            To give all attention to the code I picked an existing site as the
+            design: <Link href="https://www.bungie.net/7/en/Destiny">bungie.net</Link>.
+            Breakpoints make sure it works on both mobile and desktop, and I&apos;m
+            happy with how it turned out. You can see the result with{" "}
             <Link href="/oldWork/basiswebsite/index.html">this link</Link>.
           </Text>
         ),
@@ -79,7 +136,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "One of the biggest challenges in this project is getting all the different elements responsive on desktop and all the different phones. Here you can see the end result of the mobile home page.",
+        text: "The hardest part was getting every element to behave on desktop and on all the different phones. This is the end result of the mobile home page.",
       },
       {
         type: "image",
@@ -90,13 +147,10 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            During the project I have been working on 2 pages within bungie.net.
-            One of these pages is the main page and the other page can be found
-            by clicking on{" "}
-            <Link href="/oldWork/basiswebsite/play.html">Destiny 2</Link> within
-            the navigation of the website. The image below shows the mobile
-            version of the{" "}
-            <Link href="/oldWork/basiswebsite/play.html">Destiny 2</Link> page.
+            Two pages of bungie.net were rebuilt: the main page and the{" "}
+            <Link href="/oldWork/basiswebsite/play.html">Destiny 2</Link> page,
+            which you reach through the navigation. This is the mobile version
+            of the Destiny 2 page.
           </Text>
         ),
       },
@@ -118,7 +172,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "During my work period at Moyu, I gained experience in using Shopify, a powerful tool that enables sellers to build professional online webshops. My involvement in managing and optimizing the webshop contributed to enhancing the customer experience.",
+        text: "At Moyu I worked with Shopify, which lets sellers set up a professional webshop. I helped manage and optimise the shop to make things a bit smoother for customers.",
       },
       {
         type: "image",
@@ -127,7 +181,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "In collaboration with other talented programmers, I contributed to setting up a content management system using Sanity. Through effective teamwork and careful implementation, we managed and published content, significantly simplifying website functionality and content updates.",
+        text: "Together with other developers I set up a content management system in Sanity. That made publishing content and updating the website a lot simpler.",
       },
       {
         type: "image",
@@ -136,14 +190,7 @@ export const projects = [
       },
       {
         type: "text",
-        content: (
-          <Text variant="body">
-            I designed various aspects of the new website and developed them into
-            a cohesive and attractive whole. My contribution to creating an
-            engaging website positively impacted user interaction and
-            strengthened the company&apos;s brand identity.
-          </Text>
-        ),
+        text: "I also designed several parts of the new website and built them out into one consistent whole, which strengthened the look and feel of the brand.",
       },
     ],
   },
@@ -163,7 +210,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "During my long internship, I had the opportunity to work on Ajax business, which led to significant growth in my programming skills. Afterwards, I could apply these skills to the portfolio website you are currently viewing!",
+        text: "My long internship at Ajax Business is where my programming skills grew the most. I could apply it right away to the portfolio you're looking at now.",
       },
       {
         type: "image",
@@ -172,18 +219,11 @@ export const projects = [
       },
       {
         type: "text",
-        text: "In this project, I learned how to set up a React project using atomic design. I also worked on creating React components that interact with an API. To keep the CSS organized, we used SASS, which allows you to add extra structure to your project.",
+        text: "In this project I learned to set up a React project with atomic design and to build components that talk to an API. SASS kept the CSS organised.",
       },
       {
         type: "text",
-        content: (
-          <Text variant="body">
-            Unfortunately, I can&apos;t show much of it yet due to the project
-            still being unreleased. If you&apos;re interested in my approach or
-            any other technical knowledge I gained during this project, I&apos;d
-            be happy to answer questions about it in a conversation
-          </Text>
-        ),
+        text: "Unfortunately there isn't much to show yet, since the project is still unreleased. Curious about the approach or the technical side? Ask me, I'm happy to talk about it.",
       },
     ],
   },
@@ -211,7 +251,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "I am currently done with a minor in game design at the HvA. This minor consists of a number of projects where you have to work in teams and a project where you make something yourself. This solo project is called the bootcamp. In this bootcamp we learn to use the program Unity. The assignment for the bootcamp is to make a platformer game. The game should contain 3-5 levels that increase in difficulty the further you get in the levels. Also, the game must have 15 minutes of gameplay. ",
+        text: "The minor in game design at the HvA ended with a solo project: the bootcamp. We learned Unity and had to make a platformer with 3 to 5 levels that get harder along the way, and at least 15 minutes of gameplay.",
       },
       {
         type: "image",
@@ -220,7 +260,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "As a bootcamp game I came up with the platformer pasta la vista. In this game you are a piece of pasta that must find its way through a strange world filled with black holes, spinning locations, flying food and an evil wizard.",
+        text: "My answer was Pasta la vista, a platformer where you play a piece of pasta finding its way through a strange world full of black holes, spinning locations, flying food and an evil wizard.",
       },
       {
         type: "image",
@@ -231,10 +271,9 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            I am proud to announce that I have gotten a 10 for this project. And
-            I encourage you to also try it for yourself! Via{" "}
-            <Link href="https://rellor10.itch.io/pasta-la-vista">this link</Link>{" "}
-            you can play my game on itch.io. Have fun!
+            It got a 10, which I&apos;m pretty proud of. You can play it on itch.io
+            via <Link href="https://rellor10.itch.io/pasta-la-vista">this link</Link>.
+            Have fun!
           </Text>
         ),
       },
@@ -254,9 +293,8 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            This is one of the most fun projects I&apos;ve been able to do so
-            far. The assignment was to pick a song and shape the accompanying
-            song text. The song I had chosen was{" "}
+            One of the most fun projects so far. The assignment was to pick a
+            song and shape the lyrics around it, and I went with{" "}
             <Link href="https://www.youtube.com/watch?v=QTt7301PR5k&ab_channel=Gorillaz">
               Momentary Bliss
             </Link>{" "}
@@ -271,7 +309,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "I started to design titles based on the song. 4 different designs were created and I chose the one that best fit the lyrics, title and style of the music.",
+        text: "First came the title designs. I made 4 and picked the one that fit the lyrics, the title and the style of the music best.",
       },
       {
         type: "image",
@@ -280,7 +318,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "With the chosen design I continued working on a GIF that would eventually become the final video. My goal with the GIF was to show the chaos that the song expresses with the help of fast moving drawings. This is a style that is also used in the actual music video.",
+        text: "With that design I worked on a GIF that became the final video. The goal was to show the chaos of the song with fast moving drawings, which is also the style of the actual music video.",
       },
     ],
   },
@@ -308,7 +346,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Frogwarts is the result of the first team project of the minor game design. In this project I was allowed to make a game together with 4 others. Within this project I was the main developer and also responsible for the delivery of the game.",
+        text: "Frogwarts is the result of the first team project of the game design minor. We were a team of 5 and I was the main developer, which also made me responsible for delivering the game.",
       },
       {
         type: "image",
@@ -317,7 +355,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "You play in frogwarts as a first year student at a magical school. Your frog escapes and you quickly go after it. What you just don't know is that the place where the frog went is a forbidden floor at this school where there are all monsters. Fight the monsters, upgrade and defeat the boss!",
+        text: "You play a first year student at a magical school whose frog escapes. Going after it leads you to a forbidden floor full of monsters. Fight them, upgrade and take down the boss!",
       },
       {
         type: "image",
@@ -328,7 +366,7 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            You can play the game online at Itch.io using{" "}
+            You can play it online on itch.io via{" "}
             <Link href="https://rellor10.itch.io/frogwarts">this link</Link>.
             Have fun!
           </Text>
@@ -354,14 +392,10 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            The goal of this project was to learn the basics of JavaScript. In
-            the course of the project, I got to learn a lot about JavaScript and
-            it was also super fun to make a game with it! I took Dark souls as
-            inspiration for my game and it takes place in the Middle Ages.{" "}
-            <br />
-            <br />
-            You can try the game yourself via{" "}
-            <Link href="/oldWork/textbasedRPG/index.html">this link</Link>.
+            The goal of this project was to learn the basics of JavaScript, and
+            making a game with it made that a lot more fun. Dark Souls was the
+            inspiration and the story takes place in the Middle Ages. You can
+            try it via <Link href="/oldWork/textbasedRPG/index.html">this link</Link>.
           </Text>
         ),
       },
@@ -372,7 +406,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "One of the biggest challenges in this project is getting all the different elements responsive on desktop and all the different phones. Here you can see the end result of the mobile home page.",
+        text: "You explore a grid map with loot, text events, bonfires, a merchant and bosses. The legend on the right keeps track of what each colour means.",
       },
       {
         type: "image",
@@ -381,7 +415,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "During the project I have been working on 2 pages within bungie.net. One of these pages is the main page and the other page can be found by clicking on Destiny 2 within the navigation of the website. The image below shows the mobile version of the Destiny 2 page.",
+        text: "Along the way you meet the merchant to buy gear. There are also a few different display modes, like the 8-bit mode and the hacker mode.",
       },
     ],
   },
@@ -394,14 +428,20 @@ export const projects = [
  */
 export const projectGroups = [
   {
-    id: "recent",
-    title: "Recent work",
-    // Add the ids of new projects here, for example: ["my-project"].
-    projectIds: [],
+    id: "framna",
+    title: "Work - Framna",
+    projectIds: ["rdu", "ric"],
   },
   {
-    id: "older",
-    title: "Older work",
+    id: "fyris",
+    title: "Work - Fyris",
+    // Add the ids of Fyris projects here. While empty it shows "Coming soon".
+    projectIds: [],
+    emptyLabel: "Coming soon",
+  },
+  {
+    id: "school",
+    title: "School projects",
     projectIds: ["ajax", "bungie", "moyu", "pasta", "gorillaz", "frogwarts", "rpg"],
   },
 ];
