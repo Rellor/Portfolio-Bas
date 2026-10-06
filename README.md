@@ -72,6 +72,22 @@ bar, the page metadata, the contact details, the desktop shortcuts and the
 About / Contact / Me windows. A shortcut opens the window with the same `id`, and
 `openByDefault` decides which windows are open when the site loads.
 
+### Settings, the taskbar and the boot screen
+
+- **Settings** (desktop colour, wallpaper, title bars, old screen overlay) are
+  listed in `settingOptions` in [`src/content/site.jsx`](src/content/site.jsx).
+  A choice needs a matching value in [`src/styles/theme.js`](src/styles/theme.js)
+  and a rule in [`src/styles/themes.scss`](src/styles/themes.scss). Choices are
+  remembered in localStorage.
+- **The Uses window** reads from [`src/content/uses.js`](src/content/uses.js),
+  and the skills in About me from [`src/content/skills.js`](src/content/skills.js)
+  (pixel icons in `public/skills`).
+- **The taskbar** lists every open window; clicking one hides, shows or focuses
+  it. The Start menu is built from the desktop shortcuts and the project groups,
+  so a new project shows up there without extra work.
+- **The boot screen** shows once per visit (sessionStorage). "Restart" in the
+  Start menu plays it again and resets the windows.
+
 ## Structure
 
 The components follow [atomic design](https://bradfrost.com/blog/post/atomic-web-design/):

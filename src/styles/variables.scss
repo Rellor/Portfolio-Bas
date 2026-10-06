@@ -6,7 +6,7 @@ $c-buttonaccent: #e2f9f8;
 
 // Classic Windows 9x palette, warmed up so the chrome is not plain grey.
 $c-navy: #000080;
-$c-navy-light: #1084d0;
+$c-navy-light: #0a64b4;
 $c-desktop: #008080;
 
 // Window "face": the cream colour of frames, buttons and the taskbar, with the
@@ -16,7 +16,7 @@ $c-face-light: #fffaea;
 $c-face-dark: #a89c7a;
 $c-face-shadow: #6e6444;
 $c-grey: $c-face;
-$c-grey-dark: #7d7456;
+$c-grey-dark: #6b6347;
 $c-grey-light: $c-face-light;
 
 // Normal text size. Bump the "+ 1px" here to make all body text bigger.
@@ -30,14 +30,15 @@ $block-size: 4rem;
 $bp-mobile: 768px;
 
 // Title bar colour pairs, picked per window. Keep in sync with
-// src/styles/accents.js.
+// src/styles/accents.js. Both ends are dark enough for white text: the lightest
+// colour here has a contrast ratio of 5:1 with white (the minimum is 4.5:1).
 $accents: (
   "navy": ($c-navy, $c-navy-light),
-  "purple": (#5b1a9c, #c06be0),
-  "teal": (#006a6a, #2bc4b4),
-  "crimson": (#8a0f2c, #f0607a),
-  "orange": (#b34700, #ffb347),
-  "green": (#1b6b1f, #7fd44a),
+  "purple": (#4a148c, #8e44ad),
+  "teal": (#004d4d, #00796b),
+  "crimson": (#7f0f28, #b01e4f),
+  "orange": (#7a2e00, #b45309),
+  "green": (#124d16, #2e7d32),
 );
 
 // Raised surface: buttons, window frames, the taskbar.

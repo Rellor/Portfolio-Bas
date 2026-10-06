@@ -1,0 +1,137 @@
+@use "src/styles/variables" as *;
+
+.taskbar {
+  @include bevel-out;
+  position: relative;
+  // Above every window, however often they were focused.
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  background-color: $c-face;
+  // Set here, so the clock and buttons never depend on the page text colour.
+  color: $c-black;
+  padding: 0.25rem 0.4rem;
+}
+
+.taskbar__start {
+  position: relative;
+  flex: none;
+}
+
+.taskbar__startButton {
+  @include bevel-out;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: $c-face;
+  color: $c-black;
+  font: inherit;
+  font-weight: bold;
+  padding: 0.15rem 0.7rem 0.15rem 0.5rem;
+  cursor: pointer;
+
+  &:active,
+  &[aria-expanded="true"] {
+    @include bevel-in;
+    padding-top: 0.2rem;
+  }
+
+  &:focus-visible {
+    outline: 1px dotted $c-black;
+    outline-offset: -5px;
+  }
+}
+
+// A small four-colour square, in the spirit of the old flag.
+.taskbar__logo {
+  width: 1rem;
+  height: 1rem;
+  background:
+    linear-gradient(#ff4fa3, #ff4fa3) 0 0 / 50% 50% no-repeat,
+    linear-gradient(#7bd957, #7bd957) 100% 0 / 50% 50% no-repeat,
+    linear-gradient(#3fa9f5, #3fa9f5) 0 100% / 50% 50% no-repeat,
+    linear-gradient(#ffd23f, #ffd23f) 100% 100% / 50% 50% no-repeat;
+  border: 1px solid $c-black;
+}
+
+.taskbar__items {
+  flex: 1;
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  min-width: 0;
+  overflow-x: auto;
+  // A thin scrollbar would eat into the bar, so it stays out of sight.
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.taskbar__itemWrap {
+  flex: 0 1 11rem;
+  min-width: 2.2rem;
+  display: flex;
+}
+
+.taskbar__item {
+  @include bevel-out;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  min-width: 0;
+  background-color: $c-face;
+  color: $c-black;
+  font: inherit;
+  font-size: $font-size-small;
+  padding: 0.15rem 0.5rem;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 1px dotted $c-black;
+    outline-offset: -5px;
+  }
+}
+
+// The window in front looks pushed in.
+.taskbar__item--active {
+  @include bevel-in;
+  background-color: $c-face-light;
+  font-weight: bold;
+}
+
+.taskbar__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskbar__clock {
+  @include bevel-in;
+  flex: none;
+  min-width: 4.2rem;
+  text-align: center;
+  color: $c-black;
+  padding: 0.15rem 0.6rem;
+  font-size: $font-size-small;
+}
+
+@media screen and (max-width: $bp-mobile) {
+  // On a phone only the icons fit, the title is in the window itself.
+  .taskbar__title {
+    display: none;
+  }
+
+  .taskbar__itemWrap {
+    flex: 0 0 auto;
+  }
+
+  .taskbar__item {
+    justify-content: center;
+    padding: 0.15rem 0.4rem;
+  }
+}

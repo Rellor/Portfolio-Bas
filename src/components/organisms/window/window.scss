@@ -30,6 +30,7 @@
     margin: 0;
     color: $c-white;
     font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -53,10 +54,17 @@
   overflow: auto;
 }
 
-.closeButton {
+.window__controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+// The square buttons in the title bar: minimize, maximize and close.
+.titleButton {
   @include bevel-out;
   background-color: $c-face;
-  // A fixed size, so the X does not grow with the body text.
+  // A fixed size, so the glyph does not grow with the body text.
   width: 1.5rem;
   height: 1.3rem;
   display: flex;
@@ -72,14 +80,11 @@
   appearance: none;
 
   &:hover {
-    background-color: #e0452d;
-    color: $c-white;
+    background-color: $c-face-light;
   }
 
   &:active {
     @include bevel-in;
-    background-color: #b8321d;
-    color: $c-white;
     padding-top: 1px;
   }
 
@@ -87,4 +92,59 @@
     outline: 1px dotted $c-black;
     outline-offset: -5px;
   }
+}
+
+// The glyphs are drawn with borders so they stay crisp at any size.
+.titleButton__glyph {
+  display: block;
+  box-sizing: border-box;
+}
+
+.titleButton__glyph--minimize {
+  width: 0.55rem;
+  height: 0.2rem;
+  margin-top: 0.4rem;
+  background-color: currentColor;
+}
+
+.titleButton__glyph--maximize {
+  width: 0.65rem;
+  height: 0.6rem;
+  border: 1px solid currentColor;
+  border-top-width: 3px;
+}
+
+.titleButton__glyph--restore {
+  width: 0.55rem;
+  height: 0.5rem;
+  border: 1px solid currentColor;
+  border-top-width: 2px;
+  box-shadow: 2px -2px 0 -1px $c-face, 2px -2px 0 0 currentColor;
+}
+
+.closeButton {
+  &:hover {
+    background-color: #e0452d;
+    color: $c-white;
+  }
+
+  &:active {
+    background-color: #b8321d;
+    color: $c-white;
+  }
+}
+
+// A maximized window fills the whole desktop area, whatever its layout says.
+.window--maximized {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  resize: none;
+}
+
+// A minimized window stays mounted so it keeps its place and its content.
+.window--minimized {
+  display: none;
 }
