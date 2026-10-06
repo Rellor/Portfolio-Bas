@@ -19,6 +19,10 @@ $c-grey: $c-face;
 $c-grey-dark: #7d7456;
 $c-grey-light: $c-face-light;
 
+// Normal text size. Bump the "+ 1px" here to make all body text bigger.
+$font-size-base: calc(0.9rem + 1px);
+$font-size-small: calc(0.8rem + 1px);
+
 // The size of one block on the desktop background.
 $block-size: 4rem;
 

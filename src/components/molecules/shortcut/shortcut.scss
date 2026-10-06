@@ -5,7 +5,7 @@
   text-align: center;
 
   h3 {
-    font-size: 0.9rem;
+    font-size: $font-size-base;
     font-weight: normal;
     // Labels sit on the teal desktop: white with a dark edge, like Windows.
     color: $c-white;
