@@ -39,9 +39,9 @@
   background-color: $c-white;
   width: 100%;
   // Leaves room for the title bar so the sunken area never spills out.
-  height: calc(100% - 1.8rem - 4px);
+  height: calc(100% - 1.8rem - 2px);
   margin-top: 2px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 1.5rem;
   // Long content stays reachable instead of being clipped by the window frame.
   overflow: auto;
 }
