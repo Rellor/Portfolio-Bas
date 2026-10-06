@@ -84,7 +84,7 @@ export const windows = [
     openByDefault: true,
     layout: {
       width: "30%",
-      height: "40%",
+      height: "25%",
       mobileWidth: "80%",
       mobileHeight: "70%",
       left: "55vw",
@@ -186,9 +186,8 @@ export const windows = [
     },
     content: (
       <ProfileCard
-        photo={{ src: "/Bas.png", alt: "Me" }}
         details={[
-          { label: "Age", value: "23" },
+          { label: "Age", value: "26" },
           { label: "Location", value: "Purmerend, The Netherlands" },
         ]}
       />
