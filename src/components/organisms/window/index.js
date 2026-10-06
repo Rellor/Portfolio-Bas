@@ -22,6 +22,8 @@ import "./window.scss";
  * @param {object} props.layout
  * @param {string} props.layout.width Desktop width, e.g. "60%".
  * @param {string} props.layout.height Desktop height.
+ * @param {string} [props.layout.minWidth] Desktop minimum width, for windows
+ *   whose content needs a certain width, e.g. "28rem". Never wider than the screen.
  * @param {string} props.layout.mobileWidth
  * @param {string} props.layout.mobileHeight
  * @param {string} props.layout.left Desktop offset, e.g. "15vw".
@@ -57,6 +59,8 @@ export default function Window({
 
   const style = {
     width: isMobile ? layout.mobileWidth : layout.width,
+    minWidth: isMobile ? undefined : layout.minWidth,
+    maxWidth: "100%",
     height: isMobile ? layout.mobileHeight : layout.height,
     left: isMobile ? layout.leftMobile : layout.left,
     top: isMobile ? layout.topMobile : layout.top,
