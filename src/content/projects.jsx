@@ -103,6 +103,113 @@ export const projects = [
     ],
   },
   {
+    id: "metis",
+    title: "Metis",
+    windowTitle: "Metis",
+    heading: "Metis",
+    meta: "Fyris - Design and front-end - Figma - Next.js/Tailwind CSS",
+    icon: { src: "/MetisIcon.png", alt: "Metis Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            Metis is a monitoring tool for public affairs, communication and
+            policy teams. It keeps track of politics with AI summaries, alerts
+            and comments from experts. For Fyris I designed and built the
+            product website, which you can find at{" "}
+            <Link href="https://metismonitor.nl">metismonitor.nl</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "The design was made in Figma and built in Next.js with Tailwind CSS. Radix UI takes care of the interactive parts, the icons are from Lucide and the whole site comes in Dutch and English. Visitor numbers are tracked with Umami, which doesn't need cookies.",
+      },
+    ],
+  },
+  {
+    id: "echo",
+    title: "Metis Echo",
+    windowTitle: "Metis Echo",
+    heading: "Metis Echo",
+    meta: "Fyris - Design and front-end - Figma - Next.js/Tailwind CSS",
+    icon: { src: "/EchoIcon.png", alt: "Metis Echo Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            Metis Echo turns plenary and committee debates into transcripts you
+            can search by text, speaker or party, with an AI summary and a
+            chatbot on top. Design and front-end were mine, and you can see the
+            result at{" "}
+            <Link href="https://echo.metismonitor.nl">echo.metismonitor.nl</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "Same recipe as Metis: Figma for the design, Next.js and Tailwind CSS for the build, with Radix UI for the components. Embla handles the carousel and Sentry catches errors, so problems show up before a user mentions them.",
+      },
+    ],
+  },
+  {
+    id: "stakecircle",
+    title: "StakeCircle",
+    windowTitle: "StakeCircle",
+    heading: "StakeCircle",
+    meta: "Fyris - Design and front-end - Figma - Next.js/Tailwind CSS/D3",
+    icon: { src: "/StakeCircleIcon.png", alt: "StakeCircle Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            StakeCircle is software for stakeholder management, made by and for
+            public affairs professionals. It covers the whole cycle from
+            logging contact to planning your next move. The product website
+            lives at{" "}
+            <Link href="https://stakecircle.nl/en">stakecircle.nl</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "I designed it in Figma and built it with Next.js and Tailwind CSS, in Dutch and English. D3 draws the interactive network graph, which shows how stakeholders connect, and Radix UI and Lucide cover the components and icons.",
+      },
+    ],
+  },
+  {
+    id: "kloosterkerk",
+    title: "Kloosterkerk",
+    windowTitle: "De Kloosterkerk",
+    heading: "De Kloosterkerk",
+    meta: "Fyris - Design and front-end - Figma - Next.js/Tailwind CSS/Directus",
+    icon: { src: "/KloosterkerkIcon.png", alt: "Kloosterkerk Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            The Kloosterkerk is a church in the centre of The Hague with a full
+            agenda of services, concerts and events. I designed and built the
+            website, which is live at{" "}
+            <Link href="https://www.kloosterkerk.nl">kloosterkerk.nl</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "The design started in Figma. The site runs on Next.js with Tailwind CSS and Directus as the CMS, so the church can manage the agenda, news and pages without a developer. Sliders are built with Keen Slider, donations go through Mollie, the newsletter through Mailchimp and tickets are sold on their own subdomain.",
+      },
+    ],
+  },
+  {
     id: "bungie",
     title: "Bungie.net",
     windowTitle: "Bungie.net",
@@ -435,9 +542,7 @@ export const projectGroups = [
   {
     id: "fyris",
     title: "Work - Fyris",
-    // Add the ids of Fyris projects here. While empty it shows "Coming soon".
-    projectIds: [],
-    emptyLabel: "Coming soon",
+    projectIds: ["metis", "echo", "stakecircle", "kloosterkerk"],
   },
   {
     id: "school",
