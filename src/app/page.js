@@ -34,6 +34,7 @@ export default function Home() {
     const shared = {
       key: windowDef.id,
       title: windowDef.title,
+      accent: windowDef.accent,
       layout: windowDef.layout,
       zIndex: zIndexOf(windowDef.id),
       onClose: () => close(windowDef.id),

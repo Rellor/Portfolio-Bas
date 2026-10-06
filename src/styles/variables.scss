@@ -1,32 +1,53 @@
 // Single source of truth for the visual language of the site.
 $c-black: #000000;
 $c-white: #ffffff;
-$c-grey: #c0c0c0;
 $c-blue: #0000ff;
 $c-buttonaccent: #e2f9f8;
 
-// Classic Windows 9x palette.
+// Classic Windows 9x palette, warmed up so the chrome is not plain grey.
 $c-navy: #000080;
 $c-navy-light: #1084d0;
-$c-grey-dark: #808080;
-$c-grey-light: #dfdfdf;
 $c-desktop: #008080;
+
+// Window "face": the cream colour of frames, buttons and the taskbar, with the
+// light and dark edges that make the bevels.
+$c-face: #f1e6c8;
+$c-face-light: #fffaea;
+$c-face-dark: #a89c7a;
+$c-face-shadow: #6e6444;
+$c-grey: $c-face;
+$c-grey-dark: #7d7456;
+$c-grey-light: $c-face-light;
+
+// The size of one block on the desktop background.
+$block-size: 4rem;
 
 // The width below which the desktop metaphor collapses to a mobile layout.
 $bp-mobile: 768px;
 
+// Title bar colour pairs, picked per window. Keep in sync with
+// src/styles/accents.js.
+$accents: (
+  "navy": ($c-navy, $c-navy-light),
+  "purple": (#5b1a9c, #c06be0),
+  "teal": (#006a6a, #2bc4b4),
+  "crimson": (#8a0f2c, #f0607a),
+  "orange": (#b34700, #ffb347),
+  "green": (#1b6b1f, #7fd44a),
+);
+
 // Raised surface: buttons, window frames, the taskbar.
 @mixin bevel-out {
   border: 2px solid;
-  border-color: $c-grey-light $c-black $c-black $c-grey-light;
+  border-color: $c-face-light $c-black $c-black $c-face-light;
   box-shadow:
     inset 1px 1px 0 $c-white,
-    inset -1px -1px 0 $c-grey-dark;
+    inset -1px -1px 0 $c-face-dark;
 }
 
 // Sunken surface: window content, checkboxes, text fields.
 @mixin bevel-in {
   border: 2px solid;
-  border-color: $c-grey-dark $c-white $c-white $c-grey-dark;
-  box-shadow: inset 1px 1px 0 $c-black;
+  border-color: $c-face-dark $c-face-light $c-face-light $c-face-dark;
+  box-shadow: inset 1px 1px 0 $c-face-shadow;
 }

@@ -1,12 +1,59 @@
+@use "sass:list";
 @use "src/styles/variables" as *;
+
+// The desktop is a grid of bevelled blocks with a few coloured ones mixed in.
+// Everything is drawn with CSS gradients, so there is no image to load.
+//
+// Each accent block is `(column row colour)`, counted in blocks from the top
+// left. Add or move one by editing this list.
+$accent-blocks: (
+  (2 3 #ff4fa3),
+  (3 3 #ffd23f),
+  (8 2 #3fa9f5),
+  (9 5 #7bd957),
+  (12 1 #ff8a3d),
+  (5 7 #b06cff),
+  (14 6 #ff4fa3),
+  (1 8 #ffd23f),
+  (10 9 #3fa9f5),
+  (15 3 #7bd957),
+  (6 5 #ff8a3d),
+  (13 10 #b06cff)
+);
+
+// One `background` layer per accent block. Layers are plain strings so Sass
+// does not try to be clever with the slash and the commas.
+@function accent-layers() {
+  $layers: ();
+  @each $block in $accent-blocks {
+    $col: list.nth($block, 1);
+    $row: list.nth($block, 2);
+    $colour: list.nth($block, 3);
+    $layer: unquote(
+      "linear-gradient(#{$colour}, #{$colour}) #{$col * $block-size} #{$row * $block-size} / #{$block-size} #{$block-size} no-repeat"
+    );
+    $layers: list.append($layers, $layer, comma);
+  }
+  @return $layers;
+}
+
+// The same bevel as a window, repeated for every block.
+$bevel-light: rgba(255, 255, 255, 0.22);
+$bevel-dark: rgba(0, 0, 0, 0.22);
+
+$bevel-layers: (
+  unquote("linear-gradient(to right, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
+  unquote("linear-gradient(to bottom, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
+  unquote("linear-gradient(to left, #{$bevel-dark} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
+  unquote("linear-gradient(to top, #{$bevel-dark} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}")
+);
 
 .background {
   position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-image: url("/backgroundPattern.png");
-  background-size: 15rem;
-  background-repeat: repeat;
-  background-color: $c-white;
+  // The bevel paints on top, so the coloured blocks look like tiles too.
+  background: list.join($bevel-layers, accent-layers(), comma);
+  background-color: $c-desktop;
 }

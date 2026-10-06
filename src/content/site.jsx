@@ -81,6 +81,7 @@ export const windows = [
   {
     id: "contact",
     title: "Contact",
+    accent: "teal",
     openByDefault: true,
     layout: {
       width: "30%",
@@ -103,6 +104,7 @@ export const windows = [
     id: "projects",
     kind: "projects",
     title: "Projects",
+    accent: "navy",
     openByDefault: true,
     layout: {
       width: "36%",
@@ -120,6 +122,7 @@ export const windows = [
     id: "settings",
     kind: "settings",
     title: "Settings",
+    accent: "green",
     layout: {
       width: "26%",
       height: "30%",
@@ -134,6 +137,7 @@ export const windows = [
   {
     id: "about",
     title: "About me",
+    accent: "crimson",
     openByDefault: true,
     layout: {
       width: "30%",
@@ -170,6 +174,7 @@ export const windows = [
   {
     id: "me",
     title: "Bas",
+    accent: "purple",
     layout: {
       width: "17%",
       height: "40%",

@@ -2,11 +2,18 @@
 
 .window {
   @include bevel-out;
-  background-color: $c-grey;
+  background-color: $c-face;
   cursor: default;
   position: absolute;
   padding: 2px;
   resize: both;
+}
+
+// One modifier per accent, e.g. `window--purple`.
+@each $name, $pair in $accents {
+  .window--#{$name} .window__titlebar {
+    background: linear-gradient(90deg, nth($pair, 1), nth($pair, 2));
+  }
 }
 
 .window__titlebar {
@@ -48,7 +55,7 @@
 
 .closeButton {
   @include bevel-out;
-  background-color: $c-grey;
+  background-color: $c-face;
   width: 1.3rem;
   height: 1.2rem;
   display: flex;

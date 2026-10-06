@@ -7,7 +7,7 @@
 // Styled like the Windows taskbar, just parked at the top.
 .navlist {
   @include bevel-out;
-  background-color: $c-grey;
+  background-color: $c-face;
   color: $c-black;
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,8 @@
 
 .name {
   @include bevel-out;
-  background-color: $c-grey;
+  background: linear-gradient(90deg, $c-navy, $c-navy-light);
+  color: $c-white;
   align-self: center;
   font-size: 1.1rem;
   font-weight: bold;
