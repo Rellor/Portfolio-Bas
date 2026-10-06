@@ -6,6 +6,7 @@ import Draggable from "react-draggable";
 import CloseButton from "@/components/atoms/close-button";
 import Text from "@/components/atoms/text";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
+import { accentFor } from "@/styles/accents";
 import { MOBILE_BREAKPOINT } from "@/styles/breakpoints";
 
 import "./window.scss";
@@ -26,6 +27,8 @@ import "./window.scss";
  * @param {string} props.layout.top
  * @param {string} props.layout.leftMobile
  * @param {string} props.layout.topMobile
+ * @param {string} [props.accent] Title bar colour, one of `ACCENTS`. Defaults to
+ *   a stable colour picked from the title.
  * @param {number} [props.zIndex]
  * @param {() => void} props.onClose
  * @param {() => void} props.onFocus Called when the window is clicked or dragged.
@@ -34,6 +37,7 @@ export default function Window({
   title,
   children,
   layout = {},
+  accent,
   zIndex = 0,
   onClose,
   onFocus,
@@ -58,7 +62,12 @@ export default function Window({
       bounds="parent"
       onStart={onFocus}
     >
-      <div ref={nodeRef} className="window" style={style} onClick={onFocus}>
+      <div
+        ref={nodeRef}
+        className={`window window--${accent ?? accentFor(title)}`}
+        style={style}
+        onClick={onFocus}
+      >
         <div className="window__titlebar">
           <div className="window__handle">
             <Text>{title}</Text>

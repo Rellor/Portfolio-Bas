@@ -2,21 +2,29 @@
 
 import Shortcut from "@/components/molecules/shortcut";
 import ProjectWindow from "@/components/organisms/project-window";
+import CrtOverlay from "@/components/organisms/crt-overlay";
 import ProjectsWindow from "@/components/organisms/projects-window";
+import SettingsWindow from "@/components/organisms/settings-window";
 import Window from "@/components/organisms/window";
 import DesktopTemplate from "@/components/templates/desktop";
 import { projects, resolvedProjectGroups } from "@/content/projects";
 import {
   defaultOpenWindowIds,
+  settingOptions,
   shortcuts,
   site,
   windows,
 } from "@/content/site";
+import useStoredSetting from "@/hooks/useStoredSetting";
 import useWindowManager from "@/hooks/useWindowManager";
 
 export default function Home() {
   const { isOpen, zIndexOf, open, close, focus } =
     useWindowManager(defaultOpenWindowIds);
+  const [crt, setCrt] = useStoredSetting("setting-crt", true);
+
+  // Settings state by option id, so adding an option only needs a hook above.
+  const settingStates = { crt: { checked: crt, onChange: setCrt } };
 
   const renderWindow = (windowDef) => {
     if (!isOpen(windowDef.id)) {
@@ -24,8 +32,8 @@ export default function Home() {
     }
 
     const shared = {
-      key: windowDef.id,
       title: windowDef.title,
+      accent: windowDef.accent,
       layout: windowDef.layout,
       zIndex: zIndexOf(windowDef.id),
       onClose: () => close(windowDef.id),
@@ -35,6 +43,7 @@ export default function Home() {
     if (windowDef.kind === "projects") {
       return (
         <ProjectsWindow
+          key={windowDef.id}
           {...shared}
           groups={resolvedProjectGroups}
           onOpenProject={open}
@@ -42,7 +51,24 @@ export default function Home() {
       );
     }
 
-    return <Window {...shared}>{windowDef.content}</Window>;
+    if (windowDef.kind === "settings") {
+      return (
+        <SettingsWindow
+          key={windowDef.id}
+          {...shared}
+          settings={settingOptions.map((option) => ({
+            ...option,
+            ...settingStates[option.id],
+          }))}
+        />
+      );
+    }
+
+    return (
+      <Window key={windowDef.id} {...shared}>
+        {windowDef.content}
+      </Window>
+    );
   };
 
   const renderProjectWindow = (project) =>
@@ -57,23 +83,26 @@ export default function Home() {
     ) : null;
 
   return (
-    <DesktopTemplate
-      navigationTitle={site.name}
-      shortcuts={shortcuts.map((shortcut) => (
-        <Shortcut
-          key={shortcut.id}
-          title={shortcut.title}
-          icon={shortcut.icon}
-          spacing={shortcut.spacing}
-          onOpen={() => open(shortcut.id)}
-        />
-      ))}
-      windows={
-        <>
-          {windows.map(renderWindow)}
-          {projects.map(renderProjectWindow)}
-        </>
-      }
-    />
+    <>
+      <CrtOverlay enabled={crt} />
+      <DesktopTemplate
+        navigationTitle={site.name}
+        shortcuts={shortcuts.map((shortcut) => (
+          <Shortcut
+            key={shortcut.id}
+            title={shortcut.title}
+            icon={shortcut.icon}
+            spacing={shortcut.spacing}
+            onOpen={() => open(shortcut.id)}
+          />
+        ))}
+        windows={
+          <>
+            {windows.map(renderWindow)}
+            {projects.map(renderProjectWindow)}
+          </>
+        }
+      />
+    </>
   );
 }

@@ -5,10 +5,19 @@
   text-align: center;
 
   h3 {
-    font-size: 0.9rem;
+    font-size: $font-size-base;
     font-weight: normal;
-    color: $c-black;
+    // Labels sit on the teal desktop: white with a dark edge, like Windows.
+    color: $c-white;
+    text-shadow: 1px 1px 0 $c-black;
+    padding: 0 0.2rem;
   }
+}
+
+// Inside a window the label sits on white instead.
+.window__body .shortcut h3 {
+  color: $c-black;
+  text-shadow: none;
 }
 
 .shortcut__button {
@@ -20,4 +29,15 @@
   font: inherit;
   color: inherit;
   cursor: pointer;
+
+  &:hover h3,
+  &:focus-visible h3 {
+    background-color: $c-navy;
+    color: $c-white;
+    outline: 1px dotted $c-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 }

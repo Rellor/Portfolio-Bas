@@ -64,6 +64,12 @@ export const shortcuts = [
     icon: { src: "/MeIcon.png", alt: "Me Icon" },
     spacing: { top: "1rem", right: "3rem", left: "auto" },
   },
+  {
+    id: "settings",
+    title: "Settings",
+    icon: { src: "/settingsIcon.png", alt: "Settings Icon" },
+    spacing: { top: "1rem", right: "3rem", left: "auto" },
+  },
 ];
 
 /**
@@ -74,6 +80,7 @@ export const windows = [
   {
     id: "contact",
     title: "Contact",
+    accent: "teal",
     openByDefault: true,
     layout: {
       width: "30%",
@@ -96,6 +103,7 @@ export const windows = [
     id: "projects",
     kind: "projects",
     title: "Projects",
+    accent: "navy",
     openByDefault: true,
     layout: {
       width: "50%",
@@ -110,8 +118,25 @@ export const windows = [
     },
   },
   {
+    id: "settings",
+    kind: "settings",
+    title: "Settings",
+    accent: "green",
+    layout: {
+      width: "26%",
+      height: "30%",
+      mobileWidth: "80%",
+      mobileHeight: "45%",
+      left: "60vw",
+      top: "30vh",
+      leftMobile: "10vw",
+      topMobile: "15vh",
+    },
+  },
+  {
     id: "about",
     title: "About me",
+    accent: "crimson",
     openByDefault: true,
     layout: {
       width: "30%",
@@ -151,6 +176,7 @@ export const windows = [
   {
     id: "me",
     title: "Bas",
+    accent: "purple",
     layout: {
       width: "17%",
       height: "40%",
@@ -169,6 +195,19 @@ export const windows = [
         ]}
       />
     ),
+  },
+];
+
+/**
+ * The checkboxes in the Settings window. `id` is also the localStorage key
+ * suffix the choice is remembered under; the page wires each one up to its
+ * state in src/app/page.js.
+ */
+export const settingOptions = [
+  {
+    id: "crt",
+    label: "Old screen overlay",
+    description: "Scanlines, a curved dark rim and a bit of flicker.",
   },
 ];
 

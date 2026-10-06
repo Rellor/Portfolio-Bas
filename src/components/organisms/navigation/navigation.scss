@@ -4,21 +4,24 @@
   width: 100%;
 }
 
+// Styled like the Windows taskbar, just parked at the top.
 .navlist {
-  background-color: $c-black;
-  color: $c-white;
+  @include bevel-out;
+  background-color: $c-face;
+  color: $c-black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
-  padding: 0.75rem;
-  padding-left: 2rem;
+  padding: 0.3rem 0.5rem 0.3rem 1rem;
 
   @media screen and (max-width: $bp-mobile) {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
   }
 }
 
 .name {
   align-self: center;
   font-size: 1.1rem;
+  font-weight: bold;
 }

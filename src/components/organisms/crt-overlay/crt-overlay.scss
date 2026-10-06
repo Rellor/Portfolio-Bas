@@ -1,0 +1,68 @@
+.crtOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background:
+    // Rim of the tube.
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 55%,
+      rgba(0, 0, 0, 0.45) 100%
+    ),
+    // Scanlines.
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18) 0,
+      rgba(0, 0, 0, 0.18) 1px,
+      rgba(0, 0, 0, 0) 1px,
+      rgba(0, 0, 0, 0) 3px
+    );
+  // A slightly green, soft picture.
+  backdrop-filter: contrast(1.08) saturate(0.85) blur(0.35px);
+  animation: crtFlicker 0.16s infinite;
+}
+
+// A band of light that slowly rolls down the screen.
+.crtOverlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
+  animation: crtRoll 8s linear infinite;
+}
+
+@keyframes crtFlicker {
+  0% {
+    opacity: 0.96;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.97;
+  }
+}
+
+@keyframes crtRoll {
+  from {
+    top: -20vh;
+  }
+  to {
+    top: 100vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crtOverlay,
+  .crtOverlay::after {
+    animation: none;
+  }
+}
