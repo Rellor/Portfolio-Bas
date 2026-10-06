@@ -10,6 +10,8 @@
   gap: 0.4rem;
   width: 100%;
   background-color: $c-face;
+  // Set here, so the clock and buttons never depend on the page text colour.
+  color: $c-black;
   padding: 0.25rem 0.4rem;
 }
 
@@ -113,6 +115,7 @@
   flex: none;
   min-width: 4.2rem;
   text-align: center;
+  color: $c-black;
   padding: 0.15rem 0.6rem;
   font-size: $font-size-small;
 }
