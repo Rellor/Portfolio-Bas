@@ -65,6 +65,12 @@ export const shortcuts = [
     icon: { src: "/MeIcon.png", alt: "Me Icon" },
     spacing: { top: "1rem", right: "3rem", left: "auto" },
   },
+  {
+    id: "settings",
+    title: "Settings",
+    icon: { src: "/settingsIcon.png", alt: "Settings Icon" },
+    spacing: { top: "1rem", right: "3rem", left: "auto" },
+  },
 ];
 
 /**
@@ -108,6 +114,21 @@ export const windows = [
       top: "40vh",
       leftMobile: "5vw",
       topMobile: "12vh",
+    },
+  },
+  {
+    id: "settings",
+    kind: "settings",
+    title: "Settings",
+    layout: {
+      width: "26%",
+      height: "30%",
+      mobileWidth: "80%",
+      mobileHeight: "45%",
+      left: "60vw",
+      top: "30vh",
+      leftMobile: "10vw",
+      topMobile: "15vh",
     },
   },
   {
@@ -168,6 +189,19 @@ export const windows = [
         ]}
       />
     ),
+  },
+];
+
+/**
+ * The checkboxes in the Settings window. `id` is also the localStorage key
+ * suffix the choice is remembered under; the page wires each one up to its
+ * state in src/app/page.js.
+ */
+export const settingOptions = [
+  {
+    id: "crt",
+    label: "Old screen overlay",
+    description: "Scanlines, a curved dark rim and a bit of flicker.",
   },
 ];
 

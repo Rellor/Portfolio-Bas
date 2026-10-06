@@ -1,9 +1,32 @@
 // Single source of truth for the visual language of the site.
 $c-black: #000000;
 $c-white: #ffffff;
-$c-grey: #d9d9d9;
+$c-grey: #c0c0c0;
 $c-blue: #0000ff;
 $c-buttonaccent: #e2f9f8;
 
+// Classic Windows 9x palette.
+$c-navy: #000080;
+$c-navy-light: #1084d0;
+$c-grey-dark: #808080;
+$c-grey-light: #dfdfdf;
+$c-desktop: #008080;
+
 // The width below which the desktop metaphor collapses to a mobile layout.
 $bp-mobile: 768px;
+
+// Raised surface: buttons, window frames, the taskbar.
+@mixin bevel-out {
+  border: 2px solid;
+  border-color: $c-grey-light $c-black $c-black $c-grey-light;
+  box-shadow:
+    inset 1px 1px 0 $c-white,
+    inset -1px -1px 0 $c-grey-dark;
+}
+
+// Sunken surface: window content, checkboxes, text fields.
+@mixin bevel-in {
+  border: 2px solid;
+  border-color: $c-grey-dark $c-white $c-white $c-grey-dark;
+  box-shadow: inset 1px 1px 0 $c-black;
+}

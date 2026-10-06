@@ -20,4 +20,15 @@
   font: inherit;
   color: inherit;
   cursor: pointer;
+
+  &:hover h3,
+  &:focus-visible h3 {
+    background-color: $c-navy;
+    color: $c-white;
+    outline: 1px dotted $c-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 }
