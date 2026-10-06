@@ -21,7 +21,7 @@ import useWindowManager from "@/hooks/useWindowManager";
 export default function Home() {
   const { isOpen, zIndexOf, open, close, focus } =
     useWindowManager(defaultOpenWindowIds);
-  const [crt, setCrt] = useStoredSetting("setting-crt");
+  const [crt, setCrt] = useStoredSetting("setting-crt", true);
 
   // Settings state by option id, so adding an option only needs a hook above.
   const settingStates = { crt: { checked: crt, onChange: setCrt } };
