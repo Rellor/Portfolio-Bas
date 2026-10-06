@@ -28,7 +28,7 @@ to touch a component to add work to the site.
 
 1. Put the shortcut icon in `public/` and the screenshots in `public/<project>/`.
 2. Add an entry to `projects` in [`src/content/projects.jsx`](src/content/projects.jsx).
-3. Add its `id` to one of the groups in `projectGroups` in the same file.
+3. Add its `id` to one of the groups in `projectGroups` in the same file (Work - Framna, Work - Fyris or School projects).
 
 ```jsx
 {
@@ -60,8 +60,8 @@ in, and `projectIds` decides the order of the icons inside a group.
 
 ```jsx
 export const projectGroups = [
-  { id: "recent", title: "Recent work", projectIds: [] },
-  { id: "older", title: "Older work", projectIds: ["ajax", "bungie", "..."] },
+  { id: "framna", title: "Work - Framna", projectIds: ["rdu", "ric"] },
+  { id: "school", title: "School projects", projectIds: ["ajax", "bungie", "..."] },
 ];
 ```
 

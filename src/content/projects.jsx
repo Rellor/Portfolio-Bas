@@ -44,6 +44,66 @@ export const PROJECT_LAYOUT = {
 
 export const projects = [
   {
+    id: "rdu",
+    title: "RDU Airport",
+    windowTitle: "Raleigh-Durham Airport (RDU)",
+    heading: "Raleigh-Durham Airport",
+    meta: "2026 - Framna - Contentful/SCSS",
+    icon: { src: "/RduIcon.png", alt: "RDU Airport Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            At Framna I helped rebuild the website of Raleigh-Durham
+            International Airport. The old site was slow to change and hard to
+            use, so the new one runs on Contentful and follows a new design
+            system. It launched in September 2026 at{" "}
+            <Link href="https://www.rdu.com">rdu.com</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "What I did: I built the building blocks of the site from the design - buttons, cards, accordions, the dialog/lightbox and the media section - and added desktop sizes to the theme so every component scales properly.",
+      },
+      {
+        type: "text",
+        text: "Close to launch I processed the design feedback on the hero, the flight search and the spacing between sections, and I checked the Contentful content on acceptance so no pages or data were missing.",
+      },
+    ],
+  },
+  {
+    id: "ric",
+    title: "RIC Airport",
+    windowTitle: "Richmond Airport (RIC)",
+    heading: "Richmond Airport",
+    meta: "2026 - Framna - Contentful/SCSS",
+    icon: { src: "/RicIcon.png", alt: "RIC Airport Icon" },
+    layout: PROJECT_LAYOUT,
+    blocks: [
+      {
+        type: "text",
+        content: (
+          <Text variant="body">
+            The second airport site I worked on at Framna is for Richmond
+            International Airport. It launched in September 2026 at{" "}
+            <Link href="https://flyrichmond.com">flyrichmond.com</Link>.
+          </Text>
+        ),
+      },
+      {
+        type: "text",
+        text: "The design came from another agency and we built it as a Contentful website, so the airport can manage its own content. I turned the design into reusable components that follow the same design system as RDU.",
+      },
+      {
+        type: "text",
+        text: "Because both airports share the same foundation, I could reuse a lot of what I built for RDU and mostly had to adjust the styling and content models.",
+      },
+    ],
+  },
+  {
     id: "bungie",
     title: "Bungie.net",
     windowTitle: "Bungie.net",
@@ -394,14 +454,20 @@ export const projects = [
  */
 export const projectGroups = [
   {
-    id: "recent",
-    title: "Recent work",
-    // Add the ids of new projects here, for example: ["my-project"].
-    projectIds: [],
+    id: "framna",
+    title: "Work - Framna",
+    projectIds: ["rdu", "ric"],
   },
   {
-    id: "older",
-    title: "Older work",
+    id: "fyris",
+    title: "Work - Fyris",
+    // Add the ids of Fyris projects here. While empty it shows "Coming soon".
+    projectIds: [],
+    emptyLabel: "Coming soon",
+  },
+  {
+    id: "school",
+    title: "School projects",
     projectIds: ["ajax", "bungie", "moyu", "pasta", "gorillaz", "frogwarts", "rpg"],
   },
 ];

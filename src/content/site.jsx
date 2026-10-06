@@ -100,12 +100,12 @@ export const windows = [
     openByDefault: true,
     layout: {
       width: "36%",
-      // Taller than the other small windows so both project sections fit.
-      height: "55%",
+      // Taller than the other small windows so all project sections fit.
+      height: "70%",
       mobileWidth: "90%",
       mobileHeight: "70%",
       left: "33vw",
-      top: "40vh",
+      top: "25vh",
       leftMobile: "5vw",
       topMobile: "12vh",
     },
