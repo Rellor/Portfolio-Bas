@@ -57,20 +57,19 @@ export const projects = [
         content: (
           <Text variant="body">
             At Framna I helped rebuild the website of Raleigh-Durham
-            International Airport. The old site was slow to change and hard to
-            use, so the new one runs on Contentful and follows a new design
-            system. It launched in September 2026 at{" "}
-            <Link href="https://www.rdu.com">rdu.com</Link>.
+            International Airport. The old site was hard to change and hard to
+            use, so the new one runs on Contentful with a new design system. It
+            launched in 2026 at <Link href="https://www.rdu.com">rdu.com</Link>.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "What I did: I built the building blocks of the site from the design - buttons, cards, accordions, the dialog/lightbox and the media section - and added desktop sizes to the theme so every component scales properly.",
+        text: "I built a large part of the front end, from the reusable components up to the header, flight search and flight lists, the news section and the interactive airport map. I also set up the Contentful content models and migrations behind them.",
       },
       {
         type: "text",
-        text: "Close to launch I processed the design feedback on the hero, the flight search and the spacing between sections, and I checked the Contentful content on acceptance so no pages or data were missing.",
+        text: "Towards the launch I worked on design feedback, content checks and getting every release through test, acceptance and production.",
       },
     ],
   },
@@ -88,18 +87,18 @@ export const projects = [
         content: (
           <Text variant="body">
             The second airport site I worked on at Framna is for Richmond
-            International Airport. It launched in September 2026 at{" "}
+            International Airport. It launched in 2026 at{" "}
             <Link href="https://flyrichmond.com">flyrichmond.com</Link>.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "The design came from another agency and we built it as a Contentful website, so the airport can manage its own content. I turned the design into reusable components that follow the same design system as RDU.",
+        text: "The design came from another agency and we built it as a Contentful website, so the airport can manage its own content. I worked on the flight list and flight details, parking availability, search and the accessibility of the forms.",
       },
       {
         type: "text",
-        text: "Because both airports share the same foundation, I could reuse a lot of what I built for RDU and mostly had to adjust the styling and content models.",
+        text: "Because both airports share the same foundation, I could reuse a lot of what I built for RDU. For launch I also took care of redirects from the old site, security settings and the releases.",
       },
     ],
   },
