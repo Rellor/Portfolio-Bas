@@ -48,7 +48,7 @@ export const projects = [
     title: "RDU Airport",
     windowTitle: "Raleigh-Durham Airport (RDU)",
     heading: "Raleigh-Durham Airport",
-    meta: "2026 - Framna - Contentful/SCSS",
+    meta: "2026 - Framna - React/Next.js/TypeScript - Contentful/SCSS - Radix UI - Storybook/Vitest - Mailchimp",
     icon: { src: "/RduIcon.png", alt: "RDU Airport Icon" },
     layout: PROJECT_LAYOUT,
     blocks: [
@@ -78,7 +78,7 @@ export const projects = [
     title: "RIC Airport",
     windowTitle: "Richmond Airport (RIC)",
     heading: "Richmond Airport",
-    meta: "2026 - Framna - Contentful/SCSS",
+    meta: "2026 - Framna - React/Next.js/TypeScript - Contentful/SCSS - Algolia - Storybook/Vitest",
     icon: { src: "/RicIcon.png", alt: "RIC Airport Icon" },
     layout: PROJECT_LAYOUT,
     blocks: [

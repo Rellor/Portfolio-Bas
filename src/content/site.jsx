@@ -132,9 +132,10 @@ export const windows = [
           creativity. My work reflects my love for innovative solutions, and I
           take pride in crafting projects that showcase my perspective. I
           mainly build websites with React, Next.js and TypeScript, styled with
-          SCSS and powered by Contentful as a headless CMS. I care about
-          accessibility and testing, and I use Storybook, Vitest and Playwright
-          for that. My game design minor also gave me experience with Unity and
+          SCSS and powered by Contentful as a headless CMS, including the
+          content models and migrations. Along the way I worked with Radix UI,
+          Algolia search and Mailchimp. I care about accessibility and testing,
+          and I use Storybook, Vitest and Playwright for that. My game design minor also gave me experience with Unity and
           C#.
           <br /> <br />
           Beyond my professional hobby&apos;s, I love to have a drink with
