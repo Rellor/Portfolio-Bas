@@ -8,9 +8,13 @@ const createState = (openIds) => ({
   topZIndex: 0,
   minimizedIds: [],
   maximizedIds: [],
+  // Windows snapped to one half of the desktop: { [id]: "left" | "right" }.
+  snapped: {},
 });
 
 const without = (list, id) => list.filter((item) => item !== id);
+const withoutKey = (object, id) =>
+  Object.fromEntries(Object.entries(object).filter(([key]) => key !== id));
 
 const bringToFront = (state, id) => {
   const topZIndex = state.topZIndex + 1;
@@ -53,6 +57,7 @@ export default function useWindowManager(initialOpenIds = []) {
       openIds: without(current.openIds, id),
       minimizedIds: without(current.minimizedIds, id),
       maximizedIds: without(current.maximizedIds, id),
+      snapped: withoutKey(current.snapped, id),
     }));
   }, []);
 
@@ -82,18 +87,67 @@ export default function useWindowManager(initialOpenIds = []) {
     );
   }, []);
 
+  // The maximize button also brings a snapped window back to its own size.
   const toggleMaximize = useCallback((id) => {
     setState((current) =>
       bringToFront(
-        {
-          ...current,
-          maximizedIds: current.maximizedIds.includes(id)
-            ? without(current.maximizedIds, id)
-            : [...current.maximizedIds, id],
-        },
+        current.snapped[id]
+          ? { ...current, snapped: withoutKey(current.snapped, id) }
+          : {
+              ...current,
+              maximizedIds: current.maximizedIds.includes(id)
+                ? without(current.maximizedIds, id)
+                : [...current.maximizedIds, id],
+            },
         id,
       ),
     );
+  }, []);
+
+  /** Snap a window to the "left" or "right" half, or "top" to maximize it. */
+  const snap = useCallback((id, zone) => {
+    setState((current) =>
+      bringToFront(
+        zone === "top"
+          ? {
+              ...current,
+              snapped: withoutKey(current.snapped, id),
+              maximizedIds: current.maximizedIds.includes(id)
+                ? current.maximizedIds
+                : [...current.maximizedIds, id],
+            }
+          : {
+              ...current,
+              maximizedIds: without(current.maximizedIds, id),
+              snapped: { ...current.snapped, [id]: zone },
+            },
+        id,
+      ),
+    );
+  }, []);
+
+  /**
+   * Bring the next (or previous) open window to the front, like Alt+Tab.
+   * A minimized window comes back.
+   */
+  const cycle = useCallback((direction = 1) => {
+    setState((current) => {
+      const ids = current.openIds;
+      if (ids.length === 0) return current;
+      const frontId = ids
+        .filter((id) => !current.minimizedIds.includes(id))
+        .reduce(
+          (top, id) =>
+            (current.zIndexes[id] ?? 0) >= (current.zIndexes[top] ?? 0) ? id : top,
+          null,
+        );
+      const from = frontId === null ? -1 : ids.indexOf(frontId);
+      const next = ids[(from + direction + ids.length) % ids.length];
+      return bringToFront(
+        { ...current, minimizedIds: without(current.minimizedIds, next) },
+        next,
+      );
+    });
   }, []);
 
   /** Back to how the site looks on first load. */
@@ -117,6 +171,7 @@ export default function useWindowManager(initialOpenIds = []) {
     isOpen: (id) => state.openIds.includes(id),
     isMinimized: (id) => state.minimizedIds.includes(id),
     isMaximized: (id) => state.maximizedIds.includes(id),
+    snapOf: (id) => state.snapped[id] ?? null,
     zIndexOf: (id) => state.zIndexes[id] ?? 0,
     open,
     close,
@@ -124,6 +179,8 @@ export default function useWindowManager(initialOpenIds = []) {
     minimize,
     restore,
     toggleMaximize,
+    snap,
+    cycle,
     reset,
   };
 }

@@ -34,7 +34,6 @@ export const usesSections = [
       { label: "Code", value: "GitHub and the gh command line tool" },
       { label: "Planning", value: "Jira and Notion" },
       { label: "AI", value: "Claude Code, as a helper and not a replacement" },
-      { label: "System", value: "macOS" },
     ],
   },
 ];

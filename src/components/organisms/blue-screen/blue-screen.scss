@@ -1,0 +1,63 @@
+@use "src/styles/variables" as *;
+
+// Covers the whole page, whatever the desktop colour or wallpaper is.
+.blueScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 12vh 8vw;
+  overflow: auto;
+  background-color: #0000aa;
+  color: $c-white;
+  font-family: "Space Mono";
+  font-size: $font-size-base;
+  line-height: 1.6;
+}
+
+// The bar at the top, with the colours turned around.
+.blueScreen__title {
+  align-self: center;
+  background-color: #aaaaaa;
+  color: #0000aa;
+  font-size: $font-size-base;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.blueScreen__list {
+  list-style: none;
+
+  li::before {
+    content: "*  ";
+  }
+}
+
+.blueScreen__link {
+  color: $c-white;
+  text-decoration: underline;
+
+  &:focus-visible {
+    outline: 1px dotted $c-white;
+    outline-offset: 3px;
+  }
+}
+
+.blueScreen__cursor {
+  margin-left: 0.4rem;
+  animation: blueScreenBlink 1s steps(1) infinite;
+}
+
+@keyframes blueScreenBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blueScreen__cursor {
+    animation: none;
+  }
+}
