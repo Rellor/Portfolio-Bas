@@ -144,6 +144,34 @@
   resize: none;
 }
 
+// Snapped to one half of the desktop.
+.window--snap-left,
+.window--snap-right {
+  top: 0 !important;
+  width: 50% !important;
+  height: 100% !important;
+  transform: none !important;
+  resize: none;
+}
+
+.window--snap-left {
+  left: 0 !important;
+}
+
+.window--snap-right {
+  left: 50% !important;
+}
+
+// The outline that shows where a dragged window will land.
+.window__snapPreview {
+  position: fixed;
+  z-index: 99999;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 2px dashed $c-white;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
 // A minimized window stays mounted so it keeps its place and its content.
 .window--minimized {
   display: none;

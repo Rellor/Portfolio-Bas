@@ -36,6 +36,7 @@ export default function Taskbar({
   const [menuOpen, setMenuOpen] = useState(false);
   const [time, setTime] = useState("");
   const rootRef = useRef(null);
+  const startRef = useRef(null);
 
   // The clock starts empty so server and browser agree, then ticks.
   useEffect(() => {
@@ -52,7 +53,10 @@ export default function Taskbar({
       if (!rootRef.current?.contains(event.target)) setMenuOpen(false);
     };
     const onKeyDown = (event) => {
-      if (event.key === "Escape") setMenuOpen(false);
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        startRef.current?.focus();
+      }
     };
     document.addEventListener("mousedown", onPointerDown);
     document.addEventListener("touchstart", onPointerDown);
@@ -72,7 +76,14 @@ export default function Taskbar({
           className="taskbar__startButton"
           aria-haspopup="menu"
           aria-expanded={menuOpen}
+          ref={startRef}
           onClick={() => setMenuOpen((open) => !open)}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+              event.preventDefault();
+              setMenuOpen(true);
+            }
+          }}
         >
           <span className="taskbar__logo" aria-hidden="true" />
           Start

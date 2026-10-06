@@ -82,6 +82,12 @@
   border-bottom: 1px solid $c-white;
 }
 
+.startMenu__hint {
+  padding: 0.3rem 0.6rem 0.2rem;
+  font-size: 0.8rem;
+  color: $c-grey-dark;
+}
+
 .startMenu__restart {
   display: block;
   width: 28px;

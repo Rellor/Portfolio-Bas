@@ -50,8 +50,18 @@ const projectGroupsForMenu = resolvedProjectGroups.map((group) => ({
 
 export default function Home() {
   const manager = useWindowManager(defaultOpenWindowIds);
-  const { isOpen, open, close, focus, minimize, restore, toggleMaximize, reset } =
-    manager;
+  const {
+    isOpen,
+    open,
+    close,
+    focus,
+    minimize,
+    restore,
+    toggleMaximize,
+    snap,
+    cycle,
+    reset,
+  } = manager;
 
   const [booting, setBooting] = useState(true);
   const [crt, setCrt] = useStoredSetting("setting-crt", true);
@@ -99,6 +109,20 @@ export default function Home() {
     setBooting(true);
   }, [reset]);
 
+  // Alt+` (Shift to go back) switches between the open windows. Alt+Tab itself
+  // belongs to the operating system, a web page never gets to see it.
+  useEffect(() => {
+    if (booting) return undefined;
+    const onKeyDown = (event) => {
+      if (event.altKey && event.code === "Backquote") {
+        event.preventDefault();
+        cycle(event.shiftKey ? -1 : 1);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [booting, cycle]);
+
   // The colours are applied by CSS through data attributes on <html>.
   useEffect(() => {
     const root = document.documentElement;
@@ -120,8 +144,10 @@ export default function Home() {
     zIndex: manager.zIndexOf(id),
     isMinimized: manager.isMinimized(id),
     isMaximized: manager.isMaximized(id),
+    snap: manager.snapOf(id),
     onMinimize: () => minimize(id),
     onToggleMaximize: () => toggleMaximize(id),
+    onSnap: (zone) => snap(id, zone),
     onClose: () => close(id),
     onFocus: () => focus(id),
   });

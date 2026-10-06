@@ -85,6 +85,15 @@ About / Contact / Me windows. A shortcut opens the window with the same `id`, an
 - **The taskbar** lists every open window; clicking one hides, shows or focuses
   it. The Start menu is built from the desktop shortcuts and the project groups,
   so a new project shows up there without extra work.
+- **Windows** can be dragged to the left or right edge of the desktop to fill
+  half of it, or to the top edge to maximize. Double-clicking a title bar
+  maximizes or restores it.
+- **Keyboard:** the Start menu opens with the up and down arrow keys and works
+  with the arrow keys, Home, End, typing a letter and Escape. Alt + ` (Shift for
+  backwards) switches between the open windows. Alt+Tab belongs to the
+  operating system, so a web page cannot use it.
+- **The 404 page** is a blue screen (`src/app/not-found.js`); any key goes back
+  to the desktop.
 - **The boot screen** shows once per visit (sessionStorage). "Restart" in the
   Start menu plays it again and resets the windows.
 
