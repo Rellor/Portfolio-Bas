@@ -33,7 +33,11 @@ export default function ProjectsWindow({
       onFocus={onFocus}
     >
       {groups.map((group) => (
-        <ShortcutGroup key={group.id} title={group.title}>
+        <ShortcutGroup
+          key={group.id}
+          title={group.title}
+          emptyLabel={group.emptyLabel}
+        >
           {group.projects.map((project) => (
             <Shortcut
               key={project.id}
