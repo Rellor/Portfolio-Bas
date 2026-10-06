@@ -1,0 +1,89 @@
+@use "src/styles/variables" as *;
+
+.bootScreen {
+  position: fixed;
+  inset: 0;
+  // Above the taskbar and every window, below only the old screen overlay.
+  z-index: 200000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $c-black;
+  color: $c-white;
+  font-family: "Space Mono";
+  font-size: $font-size-base;
+  cursor: pointer;
+  transition: opacity 0.35s ease;
+}
+
+.bootScreen--leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bootScreen__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(26rem, 84vw);
+  text-align: center;
+}
+
+// The same four coloured squares as the Start button, just bigger.
+.bootScreen__logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid $c-white;
+  background:
+    linear-gradient(#ff4fa3, #ff4fa3) 0 0 / 50% 50% no-repeat,
+    linear-gradient(#7bd957, #7bd957) 100% 0 / 50% 50% no-repeat,
+    linear-gradient(#3fa9f5, #3fa9f5) 0 100% / 50% 50% no-repeat,
+    linear-gradient(#ffd23f, #ffd23f) 100% 100% / 50% 50% no-repeat;
+}
+
+.bootScreen__name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.bootScreen__tagline {
+  margin: 0.25rem 0 2rem;
+  color: $c-face-dark;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+}
+
+// A sunken bar that fills with blue blocks, like an old installer.
+.bootScreen__bar {
+  @include bevel-in;
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  height: 1.6rem;
+  padding: 2px;
+  background-color: $c-black;
+}
+
+.bootScreen__segment {
+  flex: 1;
+  background-color: transparent;
+}
+
+.bootScreen__segment--on {
+  background-color: $c-navy-light;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.35);
+}
+
+.bootScreen__status {
+  margin-top: 0.9rem;
+  min-height: 1.4em;
+  font-size: $font-size-small;
+}
+
+.bootScreen__skip {
+  margin-top: 2.5rem;
+  color: $c-face-dark;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,43 @@
+// Colours the visitor can change in Settings. The page sets them as data
+// attributes on <html> (see the inline script in src/app/layout.js and the
+// effect in src/app/page.js), and these rules turn them into colours.
+//
+// To add an option, add it here and in `settingOptions` in
+// src/content/site.jsx, and use the same value in `THEME_OPTIONS`
+// (src/styles/theme.js).
+
+@use "src/styles/variables" as *;
+
+:root {
+  --desktop-color: #{$c-desktop};
+}
+
+html[data-desktop="slate"] {
+  --desktop-color: #3a6ea5;
+}
+
+html[data-desktop="forest"] {
+  --desktop-color: #2f6f46;
+}
+
+html[data-desktop="plum"] {
+  --desktop-color: #6a3d8f;
+}
+
+html[data-desktop="rust"] {
+  --desktop-color: #a85432;
+}
+
+html[data-desktop="charcoal"] {
+  --desktop-color: #3b3f45;
+}
+
+// Title bars: the default is a colour per window, these two use one colour.
+// The extra `html` makes them win over the per-window colours.
+html[data-titlebars="classic"] .window .window__titlebar {
+  background: linear-gradient(90deg, $c-navy, $c-navy-light);
+}
+
+html[data-titlebars="graphite"] .window .window__titlebar {
+  background: linear-gradient(90deg, #3a3a3a, #8a8a8a);
+}
