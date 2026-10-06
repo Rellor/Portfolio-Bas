@@ -7,18 +7,11 @@
 // Each accent block is `(column row colour)`, counted in blocks from the top
 // left. Add or move one by editing this list.
 $accent-blocks: (
-  (2 3 #ff4fa3),
-  (3 3 #ffd23f),
-  (8 2 #3fa9f5),
-  (9 5 #7bd957),
-  (12 1 #ff8a3d),
-  (5 7 #b06cff),
-  (14 6 #ff4fa3),
-  (1 8 #ffd23f),
-  (10 9 #3fa9f5),
-  (15 3 #7bd957),
-  (6 5 #ff8a3d),
-  (13 10 #b06cff)
+  (3 3 rgba(255, 79, 163, 0.45)),
+  (9 5 rgba(123, 217, 87, 0.4)),
+  (12 1 rgba(255, 210, 63, 0.45)),
+  (5 8 rgba(63, 169, 245, 0.4)),
+  (14 9 rgba(176, 108, 255, 0.4))
 );
 
 // One `background` layer per accent block. Layers are plain strings so Sass
@@ -38,8 +31,8 @@ $accent-blocks: (
 }
 
 // The same bevel as a window, repeated for every block.
-$bevel-light: rgba(255, 255, 255, 0.22);
-$bevel-dark: rgba(0, 0, 0, 0.22);
+$bevel-light: rgba(255, 255, 255, 0.12);
+$bevel-dark: rgba(0, 0, 0, 0.14);
 
 $bevel-layers: (
   unquote("linear-gradient(to right, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
