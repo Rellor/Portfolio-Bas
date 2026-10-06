@@ -27,7 +27,6 @@ const contactEntries = [
     value: "Basderoller@gmail.com",
     href: "mailto:basderoller@gmail.com",
   },
-  { label: "Nummer", value: "+31 647520856", href: "tel:+31647520856" },
   {
     label: "LinkedIn",
     value: "Bas de Roller",
