@@ -32,7 +32,6 @@ export default function Home() {
     }
 
     const shared = {
-      key: windowDef.id,
       title: windowDef.title,
       accent: windowDef.accent,
       layout: windowDef.layout,
@@ -44,6 +43,7 @@ export default function Home() {
     if (windowDef.kind === "projects") {
       return (
         <ProjectsWindow
+          key={windowDef.id}
           {...shared}
           groups={resolvedProjectGroups}
           onOpenProject={open}
@@ -54,6 +54,7 @@ export default function Home() {
     if (windowDef.kind === "settings") {
       return (
         <SettingsWindow
+          key={windowDef.id}
           {...shared}
           settings={settingOptions.map((option) => ({
             ...option,
@@ -63,7 +64,11 @@ export default function Home() {
       );
     }
 
-    return <Window {...shared}>{windowDef.content}</Window>;
+    return (
+      <Window key={windowDef.id} {...shared}>
+        {windowDef.content}
+      </Window>
+    );
   };
 
   const renderProjectWindow = (project) =>
