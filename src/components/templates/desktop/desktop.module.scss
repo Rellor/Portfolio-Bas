@@ -36,6 +36,12 @@
   > * {
     pointer-events: auto;
   }
+
+  // Tighter than the 8rem icons inside windows, so the column can sit close
+  // to the right edge of the screen.
+  :global(.shortcut) {
+    width: 6.5rem;
+  }
 }
 
 @media screen and (max-width: $bp-mobile) {

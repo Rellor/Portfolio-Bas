@@ -51,37 +51,37 @@ export const shortcuts = [
     id: "projects",
     title: "Projects",
     icon: { src: "/desktop/projects.png", alt: "ProjectsIcon" },
-    spacing: { top: "1rem", topMobile: "0.5rem", right: "3rem", left: "auto" },
+    spacing: { top: "1rem", topMobile: "0.5rem", right: "0.25rem", left: "auto" },
   },
   {
     id: "about",
     title: "About",
     icon: { src: "/desktop/about.png", alt: "AboutIcon" },
-    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "0.25rem", left: "auto" },
   },
   {
     id: "contact",
     title: "Contact",
     icon: { src: "/desktop/contact.png", alt: "ContactIcon" },
-    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "0.25rem", left: "auto" },
   },
   {
     id: "me",
     title: "Me",
     icon: { src: "/desktop/me.png", alt: "Me Icon" },
-    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "0.25rem", left: "auto" },
   },
   {
     id: "uses",
     title: "Uses",
     icon: { src: "/usesIcon.png", alt: "Uses Icon" },
-    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "0.25rem", left: "auto" },
   },
   {
     id: "settings",
     title: "Settings",
     icon: { src: "/settingsIcon.png", alt: "Settings Icon" },
-    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "0.25rem", left: "auto" },
   },
 ];
 
