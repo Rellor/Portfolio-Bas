@@ -11,8 +11,10 @@ import Text from "@/components/atoms/text";
 import ContactList from "@/components/molecules/contact-list";
 import ProfileCard from "@/components/molecules/profile-card";
 import TitleBlock from "@/components/molecules/title-block";
+import DefinitionList from "@/components/molecules/definition-list";
 import SkillsOverview from "@/components/organisms/skills-overview";
 import { skillGroups } from "@/content/skills";
+import { usesIntro, usesSections } from "@/content/uses";
 
 export const site = {
   name: "Bas de Roller",
@@ -46,31 +48,37 @@ export const shortcuts = [
     id: "projects",
     title: "Projects",
     icon: { src: "/projectsIcon.png", alt: "ProjectsIcon" },
-    spacing: { top: "5rem", topMobile: "2rem", right: "3rem", left: "auto" },
+    spacing: { top: "1rem", topMobile: "0.5rem", right: "3rem", left: "auto" },
   },
   {
     id: "about",
     title: "About",
     icon: { src: "/aboutIcon.png", alt: "AboutIcon" },
-    spacing: { top: "1rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
   {
     id: "contact",
     title: "Contact",
     icon: { src: "/contactIcon.png", alt: "ContactIcon" },
-    spacing: { top: "1rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
   {
     id: "me",
     title: "Me",
     icon: { src: "/MeIcon.png", alt: "Me Icon" },
-    spacing: { top: "1rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
+  },
+  {
+    id: "uses",
+    title: "Uses",
+    icon: { src: "/usesIcon.png", alt: "Uses Icon" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
   {
     id: "settings",
     title: "Settings",
     icon: { src: "/settingsIcon.png", alt: "Settings Icon" },
-    spacing: { top: "1rem", right: "3rem", left: "auto" },
+    spacing: { top: "0.4rem", topMobile: "0.4rem", right: "3rem", left: "auto" },
   },
 ];
 
@@ -120,19 +128,49 @@ export const windows = [
     },
   },
   {
+    id: "uses",
+    title: "Uses",
+    accent: "orange",
+    layout: {
+      width: "32%",
+      minWidth: "26rem",
+      height: "70%",
+      mobileWidth: "90%",
+      mobileHeight: "75%",
+      left: "30vw",
+      top: "12vh",
+      leftMobile: "5vw",
+      topMobile: "8vh",
+    },
+    content: (
+      <>
+        <TitleBlock title="Uses" />
+        <Text variant="body">{usesIntro}</Text>
+        <br />
+        {usesSections.map((section) => (
+          <section key={section.title}>
+            <TitleBlock title={section.title} size="small" />
+            <DefinitionList rows={section.rows} />
+          </section>
+        ))}
+      </>
+    ),
+  },
+  {
     id: "settings",
     kind: "settings",
     title: "Settings",
     accent: "green",
     layout: {
-      width: "26%",
-      height: "30%",
-      mobileWidth: "80%",
-      mobileHeight: "45%",
-      left: "60vw",
-      top: "30vh",
-      leftMobile: "10vw",
-      topMobile: "15vh",
+      width: "34%",
+      minWidth: "26rem",
+      height: "78%",
+      mobileWidth: "90%",
+      mobileHeight: "80%",
+      left: "50vw",
+      top: "9vh",
+      leftMobile: "5vw",
+      topMobile: "8vh",
     },
   },
   {
@@ -221,15 +259,55 @@ export const windows = [
 ];
 
 /**
- * The checkboxes in the Settings window. `id` is also the localStorage key
- * suffix the choice is remembered under; the page wires each one up to its
- * state in src/app/page.js.
+ * The Settings window. `id` ties each setting to its state in src/app/page.js,
+ * and also names the localStorage key it is remembered under. A `toggle` is a
+ * checkbox, a `choice` picks one of its `options`. The values of the choices
+ * have to match src/styles/theme.js and src/styles/themes.scss.
  */
 export const settingOptions = [
   {
     id: "crt",
+    type: "toggle",
+    group: "Screen",
     label: "Old screen overlay",
     description: "Scanlines, a curved dark rim and a bit of flicker.",
+  },
+  {
+    id: "desktop",
+    type: "choice",
+    group: "Desktop",
+    label: "Desktop colour",
+    options: [
+      { value: "teal", label: "Teal", swatch: "#008080" },
+      { value: "slate", label: "Slate", swatch: "#3a6ea5" },
+      { value: "forest", label: "Forest", swatch: "#2f6f46" },
+      { value: "plum", label: "Plum", swatch: "#6a3d8f" },
+      { value: "rust", label: "Rust", swatch: "#a85432" },
+      { value: "charcoal", label: "Charcoal", swatch: "#3b3f45" },
+    ],
+  },
+  {
+    id: "wallpaper",
+    type: "choice",
+    group: "Desktop",
+    label: "Wallpaper",
+    options: [
+      { value: "blocks", label: "Blocks" },
+      { value: "grid", label: "Grid" },
+      { value: "plain", label: "Plain" },
+    ],
+  },
+  {
+    id: "titlebars",
+    type: "choice",
+    group: "Windows",
+    label: "Title bars",
+    description: "A colour per window, or one colour for all of them.",
+    options: [
+      { value: "colourful", label: "Colourful" },
+      { value: "classic", label: "Classic blue" },
+      { value: "graphite", label: "Graphite" },
+    ],
   },
 ];
 
