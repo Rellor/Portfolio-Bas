@@ -98,15 +98,15 @@ export const windows = [
     title: "Projects",
     openByDefault: true,
     layout: {
-      width: "36%",
-      // Taller than the other small windows so all project sections fit.
-      height: "70%",
+      width: "50%",
+      // The biggest window on the desktop, so all project sections fit.
+      height: "72%",
       mobileWidth: "90%",
-      mobileHeight: "70%",
+      mobileHeight: "80%",
       left: "33vw",
-      top: "25vh",
+      top: "22vh",
       leftMobile: "5vw",
-      topMobile: "12vh",
+      topMobile: "10vh",
     },
   },
   {
