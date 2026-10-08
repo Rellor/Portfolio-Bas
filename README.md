@@ -72,6 +72,20 @@ bar, the page metadata, the contact details, the desktop shortcuts and the
 About / Contact / Me windows. A shortcut opens the window with the same `id`, and
 `openByDefault` decides which windows are open when the site loads.
 
+### Metadata, preview image and favicon
+
+- The title, description and keywords are in `site.metadata` in
+  [`src/content/site.jsx`](src/content/site.jsx); the rest (Open Graph, Twitter
+  card, theme colour) is assembled in [`src/app/layout.js`](src/app/layout.js).
+- The image shown when the site is shared is
+  [`src/app/opengraph-image.png`](src/app/opengraph-image.png) (1200 x 630, also
+  used as `twitter-image.png`), with its description in the `.alt.txt` files.
+- The favicon files sit in `src/app`: `favicon.ico` (16 and 32 px), `icon.png`
+  and `apple-icon.png`. The previous favicons are kept as
+  `faviconPrevious.png` and `faviconOld.ico`.
+- The site address used for those links comes from `NEXT_PUBLIC_SITE_URL`, or
+  Vercel's production address, or `https://portfolio-rellor.vercel.app`.
+
 ### Settings, the taskbar and the boot screen
 
 - **Settings** (desktop colour, wallpaper, title bars, old screen overlay) are
@@ -94,6 +108,12 @@ About / Contact / Me windows. A shortcut opens the window with the same `id`, an
   operating system, so a web page cannot use it.
 - **The 404 page** is a blue screen (`src/app/not-found.js`); any key goes back
   to the desktop.
+- **Small screens:** the page is exactly one screen tall (`100dvh`, which
+  follows a phone's browser bars) and never scrolls itself. The taskbar stays at
+  the bottom, the desktop icons scroll in their own column when they do not
+  fit, and long content scrolls inside its window. Window positions in
+  `src/content/site.jsx` are percentages of the desktop area, so a window can
+  not start underneath the taskbar.
 - **The boot screen** shows once per visit (sessionStorage). "Restart" in the
   Start menu plays it again and resets the windows.
 

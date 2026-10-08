@@ -25,3 +25,15 @@
   font-size: 1.1rem;
   font-weight: bold;
 }
+
+// A short screen, such as a phone on its side.
+@media screen and (max-height: 520px) {
+  .navlist {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+}

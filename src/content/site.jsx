@@ -18,9 +18,22 @@ import { usesIntro, usesSections } from "@/content/uses";
 
 export const site = {
   name: "Bas de Roller",
+  // Used for the browser tab, search results and the preview when the site is
+  // shared. The preview image is src/app/opengraph-image.png, the favicon files
+  // sit next to it in src/app.
   metadata: {
-    title: "Bas de Roller",
-    description: "Created by Bas de Roller",
+    title: "Bas de Roller | Developer and designer",
+    description:
+      "Portfolio of Bas de Roller. A developer and designer who builds websites with React, Next.js and Figma. Airport and product websites for Framna and Fyris plus school projects.",
+    keywords: [
+      "Bas de Roller",
+      "portfolio",
+      "front-end developer",
+      "web designer",
+      "React",
+      "Next.js",
+      "Figma",
+    ],
   },
 };
 
@@ -86,7 +99,9 @@ export const shortcuts = [
 ];
 
 /**
- * The windows, in the order they are stacked on first load. Set `openByDefault`
+ * The windows, in the order they are stacked on first load. Positions are a
+ * share of the desktop area (the part between the top bar and the taskbar), so
+ * a window can never start underneath the taskbar. Set `openByDefault`
  * to have a window open when the site loads.
  */
 export const windows = [
@@ -100,10 +115,10 @@ export const windows = [
       height: "25%",
       mobileWidth: "80%",
       mobileHeight: "70%",
-      left: "55vw",
-      top: "7vh",
-      leftMobile: "10vw",
-      topMobile: "10vh",
+      left: "55%",
+      top: "7%",
+      leftMobile: "10%",
+      topMobile: "10%",
     },
     content: (
       <>
@@ -124,10 +139,10 @@ export const windows = [
       height: "72%",
       mobileWidth: "90%",
       mobileHeight: "80%",
-      left: "38vw",
-      top: "22vh",
-      leftMobile: "5vw",
-      topMobile: "10vh",
+      left: "38%",
+      top: "22%",
+      leftMobile: "5%",
+      topMobile: "10%",
     },
   },
   {
@@ -140,10 +155,10 @@ export const windows = [
       height: "70%",
       mobileWidth: "90%",
       mobileHeight: "75%",
-      left: "30vw",
-      top: "12vh",
-      leftMobile: "5vw",
-      topMobile: "8vh",
+      left: "30%",
+      top: "12%",
+      leftMobile: "5%",
+      topMobile: "8%",
     },
     content: (
       <>
@@ -170,10 +185,10 @@ export const windows = [
       height: "78%",
       mobileWidth: "90%",
       mobileHeight: "80%",
-      left: "50vw",
-      top: "9vh",
-      leftMobile: "5vw",
-      topMobile: "8vh",
+      left: "50%",
+      top: "9%",
+      leftMobile: "5%",
+      topMobile: "8%",
     },
   },
   {
@@ -183,14 +198,14 @@ export const windows = [
     openByDefault: true,
     layout: {
       width: "36%",
-      minWidth: "28rem",
+      minWidth: "24rem",
       height: "84%",
       mobileWidth: "90%",
       mobileHeight: "80%",
-      left: "2vw",
-      top: "7vh",
-      leftMobile: "5vw",
-      topMobile: "5vh",
+      left: "2%",
+      top: "7%",
+      leftMobile: "5%",
+      topMobile: "5%",
     },
     content: (
       <>
@@ -245,10 +260,10 @@ export const windows = [
       height: "40%",
       mobileWidth: "80%",
       mobileHeight: "70%",
-      left: "25vw",
-      top: "10vh",
-      leftMobile: "5vw",
-      topMobile: "5vh",
+      left: "25%",
+      top: "10%",
+      leftMobile: "5%",
+      topMobile: "5%",
     },
     content: (
       <ProfileCard

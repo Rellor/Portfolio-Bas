@@ -36,10 +36,10 @@ export const PROJECT_LAYOUT = {
   height: "80%",
   mobileWidth: "90%",
   mobileHeight: "95%",
-  left: "15vw",
-  top: "12vh",
-  leftMobile: "5vw",
-  topMobile: "2vh",
+  left: "15%",
+  top: "12%",
+  leftMobile: "5%",
+  topMobile: "2%",
 };
 
 export const projects = [

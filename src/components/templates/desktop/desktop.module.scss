@@ -4,7 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // 100vh is the tallest the screen gets on a phone, with the browser bars
+  // away. 100dvh follows the bars, so the taskbar never ends up underneath.
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   font-family: "Space Mono";
   font-size: $font-size-base;
@@ -18,8 +21,8 @@
   width: 100%;
 }
 
-// The icons sit in a column on the right and start a second column when the
-// screen is too short for all of them.
+// The icons sit in one column on the right. When the screen is too short for
+// all of them the column scrolls by itself, so the page never has to.
 .shortcuts {
   position: absolute;
   top: 0;
@@ -27,13 +30,16 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-end;
+  align-items: flex-end;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   // Behind the windows, which are positioned and come later.
   z-index: 0;
   pointer-events: none;
 
   > * {
+    flex: none;
     pointer-events: auto;
   }
 
