@@ -228,6 +228,21 @@ export const windows = [
           leaves more room to keep growing as a developer.
         </Text>
         <br />
+        <TitleBlock title="About this site" size="small" />
+        <Text variant="body">
+          This site started out as a portfolio built completely by hand. Later it
+          was rebuilt and extended with AI (Claude Code) to optimise the page,
+          add the taskbar, the settings and plenty of small details, and to help
+          draft some of the texts.
+        </Text>
+        <br />
+        <Text variant="body">
+          The ideas, the retro style and the choices behind it are mine, and
+          part of the original code is still mine too. Most of the code that is
+          there now was written with AI, and directed and reviewed along the
+          way.
+        </Text>
+        <br />
         <TitleBlock title="Outside of work" size="small" />
         <Text variant="body">
           Usually a drink with friends, a game or some music and movies. Have a
