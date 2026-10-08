@@ -226,6 +226,7 @@ export default function Home() {
       <CrtOverlay enabled={crt} />
       <DesktopTemplate
         navigationTitle={site.name}
+        heading={site.metadata.title}
         shortcuts={shortcuts.map((shortcut) => (
           <Shortcut
             key={shortcut.id}
