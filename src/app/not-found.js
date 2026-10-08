@@ -1,6 +1,6 @@
 import BlueScreen from "@/components/organisms/blue-screen";
 
-export const metadata = { title: "404 - Bas de Roller" };
+export const metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return <BlueScreen />;

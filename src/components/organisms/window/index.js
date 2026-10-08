@@ -33,7 +33,7 @@ const pointOf = (event) =>
  *   whose content needs a certain width, e.g. "28rem". Never wider than the screen.
  * @param {string} props.layout.mobileWidth
  * @param {string} props.layout.mobileHeight
- * @param {string} props.layout.left Desktop offset, e.g. "15vw".
+ * @param {string} props.layout.left Desktop offset as a share of the desktop area, e.g. "15%".
  * @param {string} props.layout.top
  * @param {string} props.layout.leftMobile
  * @param {string} props.layout.topMobile
