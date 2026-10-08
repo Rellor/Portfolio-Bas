@@ -21,8 +21,9 @@
   width: 100%;
 }
 
-// The icons sit in one column on the right. When the screen is too short for
-// all of them the column scrolls by itself, so the page never has to.
+// The icons sit in a column on the right. When the screen is too short for all
+// of them the rest continues in another column next to it, like on a real
+// desktop. Nothing scrolls.
 .shortcuts {
   position: absolute;
   top: 0;
@@ -30,10 +31,11 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  // The first column stays against the right edge and the next ones grow to
+  // the left of it.
+  flex-wrap: wrap-reverse;
+  align-content: flex-start;
+  overflow: hidden;
   // Behind the windows, which are positioned and come later.
   z-index: 0;
   pointer-events: none;
