@@ -57,19 +57,19 @@ export const projects = [
         content: (
           <Text variant="body">
             Framna rebuilt the website of Raleigh-Durham International Airport.
-            The old site was hard to use and even harder to change, so the new
-            one runs on Contentful with a new design system. It&apos;s live at{" "}
+            The old site was hard to use and even harder to change. The new one
+            runs on Contentful with a new design system. It&apos;s live at{" "}
             <Link href="https://www.rdu.com">rdu.com</Link>.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "My part was a big chunk of the front end: the reusable components, the header, flight search and flight lists, the news section and the interactive airport map. On top of that came the Contentful content models and migrations behind them.",
+        text: "My part was a big chunk of the front end. The reusable components and the header were mine. So were the flight search and the flight lists. The news section and the interactive airport map too. On top of that I built the Contentful content models and migrations.",
       },
       {
         type: "text",
-        text: "Towards the launch it was mostly design feedback, content checks and getting every release through test, acceptance and production.",
+        text: "Close to the launch it was mostly design feedback and content checks. Every release also had to get through test and acceptance before it went to production.",
       },
     ],
   },
@@ -94,11 +94,11 @@ export const projects = [
       },
       {
         type: "text",
-        text: "The design came from another agency and we turned it into a Contentful website, so the airport can manage its own content. Most of my time went into the flight list and flight details, parking availability, search and making the forms more accessible.",
+        text: "The design came from another agency. We built it as a Contentful website so the airport can manage its own content. Most of my time went into the flight list and the flight details. Parking availability, search and the accessibility of the forms came next.",
       },
       {
         type: "text",
-        text: "Both airports share the same foundation, so a lot of the RDU work could be reused here. For the launch there were also redirects from the old site, security settings and the releases to take care of.",
+        text: "Both airports share the same foundation so a lot of the RDU work could be reused. For the launch the redirects from the old site and the security settings needed work too.",
       },
     ],
   },
@@ -115,17 +115,17 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            Metis is a monitoring tool for public affairs, communication and
-            policy teams. It keeps track of politics with AI summaries, alerts
-            and comments from experts. Design and front-end of the product
-            website were built for Fyris, and it lives at{" "}
-            <Link href="https://metismonitor.nl">metismonitor.nl</Link>.
+            Metis is a monitoring tool for public affairs and policy teams. It
+            follows politics with AI summaries and alerts and adds comments from
+            experts. The product website is live at{" "}
+            <Link href="https://metismonitor.nl">metismonitor.nl</Link>. Design
+            and front-end were done for Fyris.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "The design was made in Figma and built in Next.js with Tailwind CSS. Radix UI takes care of the interactive parts, the icons are from Lucide and the whole site comes in Dutch and English. Visitor numbers are tracked with Umami, which doesn't need cookies.",
+        text: "The design was made in Figma and built in Next.js with Tailwind CSS. Radix UI handles the interactive parts and the icons come from Lucide. The site comes in Dutch and English. Visitors are counted with Umami and that needs no cookies.",
       },
     ],
   },
@@ -143,16 +143,15 @@ export const projects = [
         content: (
           <Text variant="body">
             Metis Echo turns plenary and committee debates into transcripts you
-            can search by text, speaker or party, with an AI summary and a
-            chatbot on top. Design and front-end were mine, and you can see the
-            result at{" "}
+            can search by text, speaker or party. An AI summary and a chatbot
+            sit on top. Design and front-end were mine. See the result at{" "}
             <Link href="https://echo.metismonitor.nl">echo.metismonitor.nl</Link>.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "Same recipe as Metis: Figma for the design, Next.js and Tailwind CSS for the build, with Radix UI for the components. Embla handles the carousel and Sentry catches errors, so problems show up before a user mentions them.",
+        text: "The build is the same as Metis: Next.js with Tailwind CSS and Radix UI. Embla handles the carousel. Sentry catches errors so problems show up before a user mentions them.",
       },
     ],
   },
@@ -169,17 +168,16 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            StakeCircle is software for stakeholder management, made by and for
-            public affairs professionals. It covers the whole cycle from
-            logging contact to planning the next move. The product website
-            lives at{" "}
+            StakeCircle is stakeholder management software made by and for
+            public affairs professionals. It covers everything from logging
+            contact to planning the next move. The product website is live at{" "}
             <Link href="https://stakecircle.nl/en">stakecircle.nl</Link>.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "The design was made in Figma and built with Next.js and Tailwind CSS, in Dutch and English. D3 draws the interactive network graph, which shows how stakeholders connect, and Radix UI and Lucide cover the components and icons.",
+        text: "The design was made in Figma and built with Next.js and Tailwind CSS. The site comes in Dutch and English. D3 draws the interactive network graph that shows how stakeholders connect. Radix UI and Lucide cover the components and icons.",
       },
     ],
   },
@@ -197,15 +195,15 @@ export const projects = [
         content: (
           <Text variant="body">
             The Kloosterkerk is a church in the centre of The Hague with a full
-            agenda of services, concerts and events. Design and front-end of
-            the website were done for them, and it is live at{" "}
+            agenda of services and concerts. Design and front-end of the website
+            were done for them. It is live at{" "}
             <Link href="https://www.kloosterkerk.nl">kloosterkerk.nl</Link>.
           </Text>
         ),
       },
       {
         type: "text",
-        text: "The design started in Figma. The site runs on Next.js with Tailwind CSS and Directus as the CMS, so the church can manage the agenda, news and pages without a developer. Sliders are built with Keen Slider, donations go through Mollie, the newsletter through Mailchimp and tickets are sold on their own subdomain.",
+        text: "The design started in Figma. The site runs on Next.js with Tailwind CSS and Directus as the CMS. The church can manage the agenda and the news without a developer. Sliders use Keen Slider and donations go through Mollie. The newsletter runs on Mailchimp and tickets are sold on their own subdomain.",
       },
     ],
   },
@@ -228,10 +226,11 @@ export const projects = [
         content: (
           <Text variant="body">
             This project was the introduction to building a responsive website.
-            To give all attention to the code, an existing site served as the
-            design: <Link href="https://www.bungie.net/7/en/Destiny">bungie.net</Link>.
-            Breakpoints make sure it works on both mobile and desktop, and the
-            end result turned out well. See it with{" "}
+            An existing site served as the design so all the attention could go
+            to the code. That site was{" "}
+            <Link href="https://www.bungie.net/7/en/Destiny">bungie.net</Link>.
+            Breakpoints make it work on mobile and desktop and the result turned
+            out well. See it with{" "}
             <Link href="/oldWork/basiswebsite/index.html">this link</Link>.
           </Text>
         ),
@@ -254,10 +253,10 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            Two pages of bungie.net were rebuilt: the main page and the{" "}
-            <Link href="/oldWork/basiswebsite/play.html">Destiny 2</Link> page,
-            which you reach through the navigation. This is the mobile version
-            of the Destiny 2 page.
+            Two pages of bungie.net were rebuilt. One is the main page and the
+            other is the{" "}
+            <Link href="/oldWork/basiswebsite/play.html">Destiny 2</Link> page in
+            the navigation. This is the mobile version of the Destiny 2 page.
           </Text>
         ),
       },
@@ -279,7 +278,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "At Moyu the work revolved around Shopify, which lets sellers set up a professional webshop. Managing and optimising the shop made things a bit smoother for customers.",
+        text: "At Moyu the work revolved around Shopify. It lets sellers set up a professional webshop. Managing and optimising the shop made things smoother for customers.",
       },
       {
         type: "image",
@@ -288,7 +287,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Together with other developers a content management system was set up in Sanity, which made publishing content and updating the website a lot simpler.",
+        text: "Together with other developers a content management system was set up in Sanity. That made publishing content and updating the website a lot simpler.",
       },
       {
         type: "image",
@@ -297,7 +296,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Several parts of the new website were designed and built out into one consistent whole, which strengthened the look and feel of the brand.",
+        text: "Several parts of the new website were designed and built out into one consistent whole. That gave the brand a clearer look and feel.",
       },
     ],
   },
@@ -317,7 +316,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "The long internship at Ajax Business is where programming skills grew the most, and they went straight into the portfolio you're looking at now.",
+        text: "The long internship at Ajax Business is where my programming skills grew the most. They went straight into the portfolio you're looking at now.",
       },
       {
         type: "image",
@@ -330,7 +329,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Unfortunately there isn't much to show yet, since the project is still unreleased. Curious about the approach or the technical side? Just ask, always happy to talk about it.",
+        text: "There isn't much to show yet because the project is still unreleased. Curious about the approach or the technical side? Just ask. Always happy to talk about it.",
       },
     ],
   },
@@ -358,7 +357,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "The minor in game design at the HvA ended with a solo project: the bootcamp. We learned Unity and had to make a platformer with 3 to 5 levels that get harder along the way, and at least 15 minutes of gameplay.",
+        text: "The minor in game design at the HvA ended with a solo project called the bootcamp. We learned Unity and had to make a platformer. It needed 3 to 5 levels that get harder along the way and at least 15 minutes of gameplay.",
       },
       {
         type: "image",
@@ -367,7 +366,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "The answer was Pasta la vista, a platformer where you play a piece of pasta finding its way through a strange world full of black holes, spinning locations, flying food and an evil wizard.",
+        text: "That became Pasta la vista. You play a piece of pasta finding its way through a strange world. It is full of black holes and spinning locations. There is flying food and an evil wizard.",
       },
       {
         type: "image",
@@ -378,7 +377,7 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            It got a 10, something to be pretty proud of. You can play it on
+            It got a 10 and I&apos;m pretty proud of that. You can play it on
             itch.io via{" "}
             <Link href="https://rellor10.itch.io/pasta-la-vista">this link</Link>.
             Have fun!
@@ -402,7 +401,7 @@ export const projects = [
         content: (
           <Text variant="body">
             One of the most fun projects so far. The assignment was to pick a
-            song and shape the lyrics around it, and the pick was{" "}
+            song and shape the lyrics around it. The pick was{" "}
             <Link href="https://www.youtube.com/watch?v=QTt7301PR5k&ab_channel=Gorillaz">
               Momentary Bliss
             </Link>{" "}
@@ -417,7 +416,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "First came the title designs. Four were made, and the one that fit the lyrics, the title and the style of the music best won.",
+        text: "First came the title designs. Four were made and the one that fit the lyrics and the music best won.",
       },
       {
         type: "image",
@@ -426,7 +425,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "That design grew into a GIF that became the final video. The goal was to show the chaos of the song with fast moving drawings, which is also the style of the actual music video.",
+        text: "That design grew into a GIF and the GIF became the final video. The goal was to show the chaos of the song with fast moving drawings. The actual music video uses that style too.",
       },
     ],
   },
@@ -454,7 +453,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Frogwarts is the result of the first team project of the game design minor. The team of 5 had me as main developer, which also meant being responsible for delivering the game.",
+        text: "Frogwarts is the result of the first team project of the game design minor. The team had 5 people and I was the main developer. That also made me responsible for delivering the game.",
       },
       {
         type: "image",
@@ -500,8 +499,8 @@ export const projects = [
         type: "text",
         content: (
           <Text variant="body">
-            The goal of this project was to learn the basics of JavaScript, and
-            making a game with it made that a lot more fun. Dark Souls was the
+            The goal of this project was to learn the basics of JavaScript.
+            Making a game with it made that a lot more fun. Dark Souls was the
             inspiration and the story takes place in the Middle Ages. You can
             try it via <Link href="/oldWork/textbasedRPG/index.html">this link</Link>.
           </Text>
@@ -514,7 +513,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "You explore a grid map with loot, text events, bonfires, a merchant and bosses. The legend on the right keeps track of what each colour means.",
+        text: "You explore a grid map with loot and text events. There are bonfires and bosses and a merchant. The legend on the right shows what each colour means.",
       },
       {
         type: "image",
@@ -523,7 +522,7 @@ export const projects = [
       },
       {
         type: "text",
-        text: "Along the way you meet the merchant to buy gear. There are also a few different display modes, like the 8-bit mode and the hacker mode.",
+        text: "Along the way you meet the merchant to buy gear. There are a few display modes too. Two of them are the 8-bit mode and the hacker mode.",
       },
     ],
   },
