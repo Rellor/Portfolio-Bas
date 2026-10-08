@@ -10,9 +10,14 @@ $skill-colors: (
   "orange": #ff8a3d,
 );
 
+// A sunken box, but with all four sides visible. The usual bevel has a light
+// right and bottom edge, which disappears against the white window body.
 .skills {
-  @include bevel-in;
   background-color: $c-face-light;
+  border: 1px solid $c-face-dark;
+  // A slightly darker top and left edge keeps the sunken look.
+  border-top: 2px solid $c-face-shadow;
+  border-left: 2px solid $c-face-shadow;
   padding: 0.75rem;
 }
 
