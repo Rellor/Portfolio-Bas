@@ -49,7 +49,7 @@ const pointOf = (event) =>
  * @param {(zone: "left"|"right"|"top") => void} [props.onSnap] Called when a
  *   drag ends at an edge: "left" and "right" for a half, "top" for maximize.
  * @param {() => void} props.onClose
- * @param {() => void} props.onFocus Called when the window is clicked or dragged.
+ * @param {() => void} props.onFocus Called when the window is pressed or dragged.
  */
 export default function Window({
   title,
@@ -156,7 +156,11 @@ export default function Window({
             .filter(Boolean)
             .join(" ")}
           style={style}
-          onClick={onFocus}
+          // Raise the window when the pointer goes down on it, not when the
+          // click ends. An icon inside this window opens another window on that
+          // click and that window has to end up in front of this one. (Draggable
+          // takes over onMouseDown, so this uses the pointer event.)
+          onPointerDown={onFocus}
         >
           <div className="window__titlebar" onDoubleClick={onToggleMaximize}>
             <div className="window__handle">
