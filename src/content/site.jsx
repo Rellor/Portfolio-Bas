@@ -220,8 +220,8 @@ export const windows = [
         </Text>
         <br />
         <Text variant="body">
-          Code still gets written and read by hand and new things get learned
-          properly. AI just saves time on the boring parts.
+          Coding and learning stay part of every project. AI saves time on the
+          boring parts.
         </Text>
         <br />
         <TitleBlock title="About this site" size="small" />
