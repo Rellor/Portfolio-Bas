@@ -1,4 +1,5 @@
 @use "sass:list";
+@use "sass:string";
 @use "src/styles/variables" as *;
 
 // The desktop is a grid of bevelled blocks with a few coloured ones mixed in.
@@ -22,7 +23,7 @@ $accent-blocks: (
     $col: list.nth($block, 1);
     $row: list.nth($block, 2);
     $colour: list.nth($block, 3);
-    $layer: unquote(
+    $layer: string.unquote(
       "linear-gradient(#{$colour}, #{$colour}) #{$col * $block-size} #{$row * $block-size} / #{$block-size} #{$block-size} no-repeat"
     );
     $layers: list.append($layers, $layer, comma);
@@ -35,10 +36,10 @@ $bevel-light: rgba(255, 255, 255, 0.12);
 $bevel-dark: rgba(0, 0, 0, 0.14);
 
 $bevel-layers: (
-  unquote("linear-gradient(to right, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
-  unquote("linear-gradient(to bottom, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
-  unquote("linear-gradient(to left, #{$bevel-dark} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
-  unquote("linear-gradient(to top, #{$bevel-dark} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}")
+  string.unquote("linear-gradient(to right, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
+  string.unquote("linear-gradient(to bottom, #{$bevel-light} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
+  string.unquote("linear-gradient(to left, #{$bevel-dark} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}"),
+  string.unquote("linear-gradient(to top, #{$bevel-dark} 3px, transparent 3px) 0 0 / #{$block-size} #{$block-size}")
 );
 
 .background {

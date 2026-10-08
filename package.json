@@ -14,7 +14,7 @@
     "audit": "yarn audit --groups dependencies"
   },
   "dependencies": {
-    "next": "15.5.23",
+    "next": "15.5.27",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-draggable": "^4.7.1"
@@ -22,12 +22,13 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "eslint": "^9.39.1",
-    "eslint-config-next": "15.5.23",
+    "eslint-config-next": "15.5.27",
     "sass": "^1.102.0",
     "typescript": "^5.9.3"
   },
   "resolutions": {
     "postcss": "^8.5.23",
-    "sharp": "^0.35.0"
+    "sharp": "^0.35.5",
+    "source-map-js": "^1.2.2"
   }
 }

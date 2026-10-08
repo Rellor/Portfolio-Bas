@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "src/styles/variables" as *;
 
 .window {
@@ -12,7 +13,7 @@
 // One modifier per accent, e.g. `window--purple`.
 @each $name, $pair in $accents {
   .window--#{$name} .window__titlebar {
-    background: linear-gradient(90deg, nth($pair, 1), nth($pair, 2));
+    background: linear-gradient(90deg, list.nth($pair, 1), list.nth($pair, 2));
   }
 }
 
