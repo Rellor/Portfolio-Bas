@@ -61,12 +61,17 @@
 }
 
 // The square buttons in the title bar: minimize, maximize and close.
+.window__body:focus-visible {
+  outline: 1px dotted $c-black;
+  outline-offset: -5px;
+}
+
 .titleButton {
   @include bevel-out;
   background-color: $c-face;
   // A fixed size, so the glyph does not grow with the body text.
   width: 1.5rem;
-  height: 1.3rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

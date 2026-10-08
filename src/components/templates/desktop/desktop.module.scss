@@ -13,6 +13,16 @@
   font-size: $font-size-base;
 }
 
+// Read by screen readers, not shown.
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .content {
   position: relative;
   // Takes what the top bar and the taskbar leave over.

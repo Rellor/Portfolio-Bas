@@ -4,7 +4,8 @@
   width: 8rem;
   text-align: center;
 
-  h3 {
+  .shortcut__label {
+    display: block;
     font-size: $font-size-base;
     font-weight: normal;
     // Labels sit on the teal desktop: white with a dark edge, like Windows.
@@ -15,7 +16,7 @@
 }
 
 // Inside a window the label sits on white instead.
-.window__body .shortcut h3 {
+.window__body .shortcut .shortcut__label {
   color: $c-black;
   text-shadow: none;
 }
@@ -30,8 +31,8 @@
   color: inherit;
   cursor: pointer;
 
-  &:hover h3,
-  &:focus-visible h3 {
+  &:hover .shortcut__label,
+  &:focus-visible .shortcut__label {
     background-color: $c-navy;
     color: $c-white;
     outline: 1px dotted $c-white;

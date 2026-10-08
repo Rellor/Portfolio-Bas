@@ -184,7 +184,10 @@ export default function Window({
             </div>
           </div>
 
-          <div className="window__body">{children}</div>
+          {/* Focusable, so the keyboard can scroll long content. The label names it. */}
+        <div className="window__body" role="region" aria-label={title} tabIndex={0}>
+          {children}
+        </div>
         </div>
       </Draggable>
       {preview ? (

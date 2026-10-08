@@ -76,6 +76,7 @@ export default function BootScreen({ name, onDone }) {
         <div
           className="bootScreen__bar"
           role="progressbar"
+          aria-label="Loading"
           aria-valuemin={0}
           aria-valuemax={SEGMENTS}
           aria-valuenow={filled}

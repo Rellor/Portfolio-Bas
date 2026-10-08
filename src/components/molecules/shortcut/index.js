@@ -1,7 +1,6 @@
 "use client";
 
 import Icon from "@/components/atoms/icon";
-import Heading from "@/components/atoms/heading";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { MOBILE_BREAKPOINT } from "@/styles/breakpoints";
 
@@ -35,8 +34,9 @@ export default function Shortcut({ title, icon, onOpen, spacing }) {
   return (
     <div className="shortcut" style={style}>
       <button type="button" className="shortcut__button" onClick={onOpen}>
-        {icon ? <Icon src={icon.src} alt={icon.alt ?? ""} /> : null}
-        <Heading level={3}> {title} </Heading>
+        {/* The label under the icon names the button, so the picture is decorative. */}
+        {icon ? <Icon src={icon.src} alt="" /> : null}
+        <span className="shortcut__label">{title}</span>
       </button>
     </div>
   );

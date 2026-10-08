@@ -114,6 +114,7 @@ export default function Taskbar({
                 item.active ? "taskbar__item taskbar__item--active" : "taskbar__item"
               }
               aria-pressed={item.active}
+              aria-label={item.title}
               onClick={() => onItemClick(item.id)}
             >
               {item.icon ? <Icon src={item.icon.src} alt="" size={20} /> : null}

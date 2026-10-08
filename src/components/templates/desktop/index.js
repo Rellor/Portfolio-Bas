@@ -12,15 +12,18 @@ import styles from "./desktop.module.scss";
  * @param {React.ReactNode} props.shortcuts Desktop shortcuts.
  * @param {React.ReactNode} props.windows Open windows.
  * @param {React.ReactNode} [props.taskbar]
+ * @param {string} [props.heading] The page heading for screen readers (not shown).
  */
 export default function DesktopTemplate({
   navigationTitle,
   shortcuts,
   windows,
   taskbar,
+  heading,
 }) {
   return (
     <main className={styles.main}>
+      {heading ? <h1 className={styles.visuallyHidden}>{heading}</h1> : null}
       <Navigation title={navigationTitle} />
       <div className={styles.content}>
         <div className={styles.shortcuts}>{shortcuts}</div>

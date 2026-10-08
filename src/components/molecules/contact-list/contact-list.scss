@@ -7,3 +7,9 @@
 .contactList__value {
   color: $c-blue;
 }
+
+// A comfortable target to click or tap: at least 24px tall.
+.contactList a {
+  display: inline-block;
+  padding-block: 2px;
+}
