@@ -18,9 +18,22 @@ import { usesIntro, usesSections } from "@/content/uses";
 
 export const site = {
   name: "Bas de Roller",
+  // Used for the browser tab, search results and the preview when the site is
+  // shared. The preview image is src/app/opengraph-image.png, the favicon files
+  // sit next to it in src/app.
   metadata: {
-    title: "Bas de Roller",
-    description: "Created by Bas de Roller",
+    title: "Bas de Roller | Developer and designer",
+    description:
+      "Portfolio of Bas de Roller, a developer and designer who builds websites with React, Next.js and Figma. Airport and product websites for Framna and Fyris, plus school projects.",
+    keywords: [
+      "Bas de Roller",
+      "portfolio",
+      "front-end developer",
+      "web designer",
+      "React",
+      "Next.js",
+      "Figma",
+    ],
   },
 };
 

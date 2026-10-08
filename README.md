@@ -72,6 +72,20 @@ bar, the page metadata, the contact details, the desktop shortcuts and the
 About / Contact / Me windows. A shortcut opens the window with the same `id`, and
 `openByDefault` decides which windows are open when the site loads.
 
+### Metadata, preview image and favicon
+
+- The title, description and keywords are in `site.metadata` in
+  [`src/content/site.jsx`](src/content/site.jsx); the rest (Open Graph, Twitter
+  card, theme colour) is assembled in [`src/app/layout.js`](src/app/layout.js).
+- The image shown when the site is shared is
+  [`src/app/opengraph-image.png`](src/app/opengraph-image.png) (1200 x 630, also
+  used as `twitter-image.png`), with its description in the `.alt.txt` files.
+- The favicon files sit in `src/app`: `favicon.ico` (16 and 32 px), `icon.png`
+  and `apple-icon.png`. The previous favicons are kept as
+  `faviconPrevious.png` and `faviconOld.ico`.
+- The site address used for those links comes from `NEXT_PUBLIC_SITE_URL`, or
+  Vercel's production address, or `https://portfolio-rellor.vercel.app`.
+
 ### Settings, the taskbar and the boot screen
 
 - **Settings** (desktop colour, wallpaper, title bars, old screen overlay) are
