@@ -232,14 +232,10 @@ export const windows = [
         </Text>
         <br />
         <Text variant="body">
-          The ideas, the retro style and the choices behind it are mine. Part of
-          the original code is still mine too. AI helped with building it while
-          the direction and the final say stayed with me.
-        </Text>
-        <br />
-        <Text variant="body">
-          My view on AI is simple. It&apos;s a great tool for speeding things up
-          but it&apos;s still a tool.
+          The ideas and the retro style are my own and some of the original code
+          is still in there. AI did a lot of the building and I&apos;m happy with
+          that. It&apos;s a great tool for speeding things up and it made it easy
+          to try ideas and polish the details.
         </Text>
         <br />
         <TitleBlock title="Outside of work" size="small" />

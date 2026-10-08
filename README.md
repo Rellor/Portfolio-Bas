@@ -7,11 +7,12 @@ SCSS and [react-draggable](https://github.com/react-grid-layout/react-draggable)
 
 This portfolio started as a site built completely by hand. Later it was rebuilt
 and extended with the help of AI ([Claude Code](https://claude.com/claude-code))
-to optimise the code and add small details. The ideas, the retro style and the
-choices behind it are the author's own. Part of the original code is still his
-too. AI helped with building it while the direction and the final say stayed
-with him. His view on AI is simple. It is a great tool for speeding things up
-but it is still a tool. The same note is in the About window on the site.
+to optimise the code and add small details.
+
+The ideas and the retro style are the author's own and some of the original
+code is still in there. AI did a lot of the building and he is happy with that.
+It is a great tool for speeding things up and it made it easy to try ideas and
+polish the details. The same note is in the About window on the site.
 
 ## Getting started
 
