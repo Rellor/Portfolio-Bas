@@ -19,7 +19,10 @@ html {
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* The desktop is one screen. Whatever does not fit scrolls inside its own
+     window, so the page itself never scrolls (or bounces on a phone). */
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 body {

@@ -108,6 +108,12 @@ About / Contact / Me windows. A shortcut opens the window with the same `id`, an
   operating system, so a web page cannot use it.
 - **The 404 page** is a blue screen (`src/app/not-found.js`); any key goes back
   to the desktop.
+- **Small screens:** the page is exactly one screen tall (`100dvh`, which
+  follows a phone's browser bars) and never scrolls itself. The taskbar stays at
+  the bottom, the desktop icons scroll in their own column when they do not
+  fit, and long content scrolls inside its window. Window positions in
+  `src/content/site.jsx` are percentages of the desktop area, so a window can
+  not start underneath the taskbar.
 - **The boot screen** shows once per visit (sessionStorage). "Restart" in the
   Start menu plays it again and resets the windows.
 
