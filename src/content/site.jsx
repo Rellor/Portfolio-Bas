@@ -24,7 +24,7 @@ export const site = {
   metadata: {
     title: "Bas de Roller | Developer and designer",
     description:
-      "Portfolio of Bas de Roller, a developer and designer who builds websites with React, Next.js and Figma. Airport and product websites for Framna and Fyris, plus school projects.",
+      "Portfolio of Bas de Roller. A developer and designer who builds websites with React, Next.js and Figma. Airport and product websites for Framna and Fyris plus school projects.",
     keywords: [
       "Bas de Roller",
       "portfolio",
