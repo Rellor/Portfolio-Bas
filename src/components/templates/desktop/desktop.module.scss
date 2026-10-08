@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // 100vh is the tallest the screen gets on a phone, with the browser bars
-  // away. 100dvh follows the bars, so the taskbar never ends up underneath.
-  height: 100vh;
-  height: 100dvh;
+  // Fixed to all four edges of the screen. That follows a phone's browser bars
+  // exactly, which 100vh (too tall) and 100dvh (can fall short) do not always.
+  position: fixed;
+  inset: 0;
   overflow: hidden;
   font-family: "Space Mono";
   font-size: $font-size-base;

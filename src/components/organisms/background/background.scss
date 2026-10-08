@@ -42,10 +42,8 @@ $bevel-layers: (
 );
 
 .background {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
+  position: fixed;
+  inset: 0;
   z-index: -1;
   // The bevel paints on top, so the coloured blocks look like tiles too.
   background: list.join($bevel-layers, accent-layers(), comma);
