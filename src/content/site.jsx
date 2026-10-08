@@ -211,19 +211,17 @@ export const windows = [
       <>
         <TitleBlock title="Welcome" />
         <Text variant="body">
-          My name is Bas, a programmer and designer driven by creativity.
-          Innovative solutions are what get the work going, and the projects
-          here show the perspective behind them.
+          My name is Bas, a programmer and designer driven by creativity. The
+          projects here show what I like to build.
         </Text>
         <br />
         <Text variant="body">
-          Most of it is websites built with React, Next.js and TypeScript,
-          styled with SCSS or Tailwind CSS and powered by a headless CMS like
-          Contentful or Directus, content models and migrations included. Every
-          site starts in Figma. Radix UI, Algolia, D3 and Mailchimp came along
-          the way, and accessibility and testing (Storybook, Vitest,
-          Playwright) are part of the routine. The game design minor added
-          Unity and C# to the mix.
+          Most of my work is websites built with React, Next.js and TypeScript.
+          The styling is SCSS or Tailwind CSS and the content lives in a
+          headless CMS like Contentful or Directus. I build the content models
+          and migrations too. Every site starts in Figma. Accessibility and
+          testing are part of the routine. The game design minor added Unity and
+          C#.
         </Text>
         <br />
         <TitleBlock title="Skills and tools" size="small" />
@@ -231,22 +229,34 @@ export const windows = [
         <br />
         <TitleBlock title="Working with AI" size="small" />
         <Text variant="body">
-          AI is part of the daily workflow, like a fast second pair of eyes. It
-          helps with boilerplate, explains unfamiliar code, reviews changes and
-          tries out ideas.
+          AI is part of the daily workflow. It helps with boilerplate and with
+          explaining unfamiliar code. It also reviews changes and tries out
+          ideas.
         </Text>
         <br />
         <Text variant="body">
-          It doesn&apos;t replace the thinking though. Code still gets written,
-          read and understood by hand, and new things get learned properly
-          instead of copied. That way AI saves time on the boring parts and
-          leaves more room to keep growing as a developer.
+          Coding and learning stay part of every project. AI saves time on the
+          boring parts.
+        </Text>
+        <br />
+        <TitleBlock title="About this site" size="small" />
+        <Text variant="body">
+          This site started out as a portfolio built completely by hand. Later it
+          was rebuilt and extended with the help of AI (Claude Code) to optimise
+          the code and add small details.
+        </Text>
+        <br />
+        <Text variant="body">
+          The ideas and the retro style are my own and some of the original code
+          is still in there. AI did a lot of the building and I&apos;m happy with
+          that. It&apos;s a great tool for speeding things up and it made it easy
+          to try ideas and polish the details.
         </Text>
         <br />
         <TitleBlock title="Outside of work" size="small" />
         <Text variant="body">
-          Usually a drink with friends, a game or some music and movies. Have a
-          look around the portfolio to see what has been going on!
+          Outside of work it is usually a drink with friends or a game together.
+          Music and movies are big too. Have a look around!
         </Text>
       </>
     ),
@@ -320,7 +330,7 @@ export const settingOptions = [
     type: "choice",
     group: "Windows",
     label: "Title bars",
-    description: "A colour per window, or one colour for all of them.",
+    description: "A colour per window or one colour for all of them.",
     options: [
       { value: "colourful", label: "Colourful" },
       { value: "classic", label: "Classic blue" },

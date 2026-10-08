@@ -3,6 +3,17 @@
 A desktop-metaphor portfolio built with [Next.js](https://nextjs.org/) (app router),
 SCSS and [react-draggable](https://github.com/react-grid-layout/react-draggable).
 
+## How this site was made
+
+This portfolio started as a site built completely by hand. Later it was rebuilt
+and extended with the help of AI ([Claude Code](https://claude.com/claude-code))
+to optimise the code and add small details.
+
+The ideas and the retro style are the author's own and some of the original
+code is still in there. AI did a lot of the building and he is happy with that.
+It is a great tool for speeding things up and it made it easy to try ideas and
+polish the details. The same note is in the About window on the site.
+
 ## Getting started
 
 ```bash
