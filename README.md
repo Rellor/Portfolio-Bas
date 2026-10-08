@@ -121,8 +121,9 @@ About / Contact / Me windows. A shortcut opens the window with the same `id`, an
   to the desktop.
 - **Small screens:** the page is exactly one screen tall (`100dvh`, which
   follows a phone's browser bars) and never scrolls itself. The taskbar stays at
-  the bottom, the desktop icons scroll in their own column when they do not
-  fit, and long content scrolls inside its window. Window positions in
+  the bottom, the desktop icons continue in another column next to the first
+  when they do not fit (nothing scrolls there), and long content scrolls inside
+  its window. Window positions in
   `src/content/site.jsx` are percentages of the desktop area, so a window can
   not start underneath the taskbar.
 - **The boot screen** shows once per visit (sessionStorage). "Restart" in the
